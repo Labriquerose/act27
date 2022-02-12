@@ -12,42 +12,28 @@
   <body>
     <div class="container">
       <div class="header">
-        <div class="title"> <h2>Le naufrage</h2></div>
-        <div class="subTitle"> <p>Inspiré par la Bible </br> 
+        <div class="introTitle"><h2>Le naufrage</h2><div id="divTimer">
+          <p id="timer" ></p></div>
+         <img id="fondtimer" src="./icone/timer.png" alt="">
+        </div>
+        <div class="introSubTitle"> <p>Inspiré par la Bible </br> 
           Actes des apotres 27-28</p></div>
-
-          <div id="divTimer">
-            <p id="timer" ></p>
-          </div>
-           <img id="fondtimer" src="./icone/timer.png" alt="">
-
-
       </div>
 
-      <div class="content">
-        <div class="cont1"><button >Tutoriel du jeu</button></div>
-        <div class="cont2"><div class="pos">
-          <img id= imgintro src="./imgfond/intro.jpg" alt="">
-          <button id="muted"><img src="./icone/sound.png" alt=""></button>
-        </div></div>
-        <div class="cont3"><button >Commencer</button>
-          <div class="instructions">
-            <p><img id="tuto" src="./icone/tuto.png" alt="">
-            Les indices automatiques sont conseillés si c’est votre première fois.</p>
-          </div>
-        </div>
+      <div class="introContent">
+        <div class="introtuto"><button >Tutoriel du jeu</button></div>
+        <div class="introImg"><img id= imgintro src="./imgfond/intro.jpg" alt=""></div>
+        <div class="introCommencer"> <button >Commencer</button></div>
       </div>
 
       <div class="footer">
-        <div class="btn1">
-          <img class="btn-nav" id="indice" src="./icone/indice.png" alt="" />
-        </div>
-        <div class="btn2"><button>Indices automatiques</button></div>
-        <div class="next"><button id="next">></button></div>
+        <div class="indice"><img src="./icone/indice.png" alt=""></div>
+        <div class="son">
+          <button id="muted"><img src="./icone/sound.png" alt=""></button></div>
+       <div id="next" >></div> <div class="next"></div>
       </div>
-      
-    </div><div class="fondnext"></div>
+    </div>
   </body>
-
   <script src="index appli.js"></script>
+  <script src="./timer.js"></script>
 </html>
