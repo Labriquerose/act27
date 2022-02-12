@@ -155,6 +155,16 @@ h3 {
   color: #ff6a70;
   margin-top: 3vh;
 }
+h4 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 120%;
+  align-items: center;
+  text-align: center;
+  margin-top: 0vh;
+}
 .subtitle {
   height: 40px;
   padding: 10px;
@@ -204,6 +214,16 @@ p {
   text-align: left;
 }
 .instructions {
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  border-radius: 12px;
+  width: 90%;
+
+  margin: 10px auto 10px;
+
+  padding: 10px;
+}
+.instructionssbutitle {
   border: 1px solid #e5e7eb;
   box-sizing: border-box;
   border-radius: 12px;
