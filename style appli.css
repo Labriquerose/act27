@@ -240,6 +240,7 @@ p {
   color: whitesmoke;
   font-size: 5em;
   font-family: "Festive", cursive;
+  margin: 0;
 }
 
 #muted {
