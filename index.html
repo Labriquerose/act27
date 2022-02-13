@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./style appli.css" />
   </head>
 
-  <body>
-    <div class="container">
+  <body id="body">
+    <div class="container" id="container">
       <div class="header" id="header">
         <div class="introTitle"><h2 id="h2Title">Le naufrage</h2>
         </div>
@@ -18,31 +18,48 @@
           Actes des apotres 27-28</div>
       </div>
       
-      <div class="introContent">
-        <div class="introtuto"><button >Tutoriel du jeu</button></div>
-        <div class="introImg"><img id= imgintro src="./imgfond/intro.jpg" alt=""></div>
-        <div class="introCommencer"> <button id="commencer" >Commencer</button></div>
+      <div class="introContent" id="introContent" >
+        <div class="introtuto" id="introtuto1"><button id="tuto" >Tutoriel du jeu</button></div>
+        <div class="introImg"id="introtuto2"><img id= imgintro src="./imgfond/intro.jpg" alt=""></div>
+        <div class="introCommencer" id="introtuto3"> <button id="commencer" >Commencer</button></div>
       </div>
       
-      <div class="footer">
+      <div class="footer" id="footer">
         <div class="indice"><img src="./icone/indice.png" alt=""></div>
         <div class="son">
-          <button id="muted"><img src="./icone/sound.png" alt=""></button></div>
-       <div id="next" >></div> <div class="next"></div>
+          <button id="muted"  ><img src="./icone/sound.png" alt=""></button></div>
+       <div id="next" >></div> <div class="next" id="nextFond"></div>
       </div>
       </div>
-      
-<div><div id="divTimer">
-    <p id="timer" ></p></div>
-    
-    <img id="fondtimer" src="./icone/timer.png" alt="" />
-  </div></div>
-
-  
-       
-  </body>
 
 
+
+
+
+
+
+
+<!-- ----------------------sons---------------------- -->
+<audio id=myaudio control loop>
+  <source src="./son/port1.mp3">
+  </audio>
+<audio id=myaudio2>
+  <source src="./son/transition1.mp3">
+</audio>
+
+
+
+
+<!-------------- timer---------------->
+<div>
+  <div id="divTimer">
+    <p id="timer" ></p>
+  </div>
+      <img id="fondtimer" src="./icone/timer.png" alt="" />
+  </div>
+</div>
+
+</body>
   <script src="index appli.js"></script>  
   <script src="timer.js"></script>  
 </html>
