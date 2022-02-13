@@ -1,16 +1,18 @@
-//timer
-const departMinutes = 60;
-let temps = departMinutes * 60;
+// next
 
-const timerElement = document.getElementById("timer");
+next.addEventListener("click", () => {
+  let h2Title = document.getElementById("h2Title");
+  h2Title.parentNode.removeChild(h2Title);
 
-setInterval(() => {
-  let minutes = parseInt(temps / 60, 10);
-  let secondes = parseInt(temps % 60, 10);
+  document.querySelector(
+    "body > div > div.header > div.introTitle "
+  ).innerHTML += `
+  <h3>Le port de Césaré</h3>`;
 
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  secondes = secondes < 10 ? "0" + secondes : secondes;
+  let sub = document.getElementById("sub");
+  sub.parentNode.removeChild(sub);
 
-  timerElement.innerText = `${minutes}:${secondes}`;
-  temps = temps <= 0 ? 0 : temps - 1;
-}, 1000);
+  let title = document.getElementById("header");
+  title.style.gridTemplateAreas = "introTitle";
+  title.style.gridTemplateRows = "1fr";
+});
