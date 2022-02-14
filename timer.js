@@ -18,7 +18,7 @@ commencer.addEventListener("click", () => {
   next.style.visibility = "visible";
   let nextFond = document.getElementById("nextFond");
   nextFond.style.visibility = "visible";
-
+document.querySelector("body").requestFullscreen()
   setInterval(() => {
     let minutes = parseInt(temps / 60, 10);
     let secondes = parseInt(temps % 60, 10);
