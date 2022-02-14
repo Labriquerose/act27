@@ -6,10 +6,18 @@ const commencer = document.getElementById("commencer");
 commencer.addEventListener("click", () => {
   document.querySelector(
     "#sub "
-  ).innerHTML = `Vous avez 60 minutes, votre score final dépendra du temps restant!`;
+  ).innerHTML = `Vous avez 60 minutes, votre score final dépendra du temps restant!
+`;
 
   let commencer = document.getElementById("commencer");
   commencer.style.visibility = "hidden";
+  let tuto = document.getElementById("tuto");
+  tuto.style.visibility = "hidden";
+
+  let next = document.getElementById("next");
+  next.style.visibility = "visible";
+  let nextFond = document.getElementById("nextFond");
+  nextFond.style.visibility = "visible";
 
   setInterval(() => {
     let minutes = parseInt(temps / 60, 10);
