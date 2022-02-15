@@ -389,5 +389,12 @@ p {
   align-self: center;
 }
 .flecheBas {
+  border: none;
+  background-color: #b9bacf00;
   transform: rotate(180deg);
+}
+.flecheHaut {
+  border: none;
+  background-color: #b9bacf00;
+
 }

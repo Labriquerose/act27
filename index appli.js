@@ -326,19 +326,31 @@ const choixImageHiero = () => {
   // btn verif code
   btnetape3.addEventListener("click", () => {
     let propo = [chiffre1, chiffre2, chiffre3];
-    console.log(propo);
-    console.log(code);
     const propositionCode = () => {
       if (JSON.stringify(propo) == JSON.stringify(code)) {
         reponse.innerHTML = `Bien, nous partons donc pour l'Italie!
-       
-
-    <audio id=myaudio
+      <audio id=myaudio
         autoplay
-        
-        
         >
        <source src="./son/italie.mp3">`;
+// mise en place btnetape4
+let nextetape3 = document.getElementById("btnetape3");
+nextetape3.parentNode.removeChild(nextetape3);
+document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape4" >></div>
+`;
+//supression etape3
+btnetape4.addEventListener("click", () => {
+  document.querySelector(
+   "body > div.container > div.introContent"
+  ).innerHTML = ``
+//rajout etape4
+  document.querySelector(
+  "body > div.container > div.introContent"
+).innerHTML = `etape4`
+})
+
+
       } else {
         reponse.innerHTML =
           "On ne se comprend pas, un problème d'accent peut être?";
@@ -401,9 +413,7 @@ const ajoutEtape2 = () => {
   
   <div class="cont1">
   <div class="instructions"> <h4> <img id="question" src="./icone/question.png" alt="" />Je veux aller en:</h4>
-    <p>
-     
-      
+    <p>     
       <i style="font-family: Inter;
       font-style: italic;
       font-weight: 300;
@@ -416,22 +426,19 @@ const ajoutEtape2 = () => {
     </p>
   </div>
 </div>
-
-
-
 <div class="choixImg">
 <div class="fleche1">
-  <button class="flecheImg" id="fleche1" type="">
+  <button class="flecheHaut" id="fleche1" type="">
     <img class="flecheHaut" src="./icone/flecheImg.png" alt="" />
   </button>
 </div>
 <div class="fleche2">
-  <button class="flecheImg" id="fleche2" type="">
+  <button class="flecheHaut" id="fleche2" type="">
     <img class="flecheHaut" src="./icone/flecheImg.png" alt="" />
   </button>
 </div>
 <div class="fleche3">
-  <button class="flecheImg" id="fleche3" type="">
+  <button class="flecheHaut" id="fleche3" type="">
     <img class="flecheHaut" src="./icone/flecheImg.png" alt="" />
   </button>
 </div>
@@ -454,23 +461,9 @@ const ajoutEtape2 = () => {
   </button>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-<div class="cont5">
-  
-    <div class="instructions">
-
-    </div>
-  
+<div class="cont5">  
+    <div class="instructions" id="reponse">
+    </div> 
 </div>
   
   `;
