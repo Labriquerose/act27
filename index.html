@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnlockBible Actes 27, Le naufrage de Paul</title>
+    <script type="text/javascript">
+      function load() {
+          this.length=load.arguments.length;
+          for (var i=0;i<this.length;i++) {
+              this[i+1]=new Image();
+              this[i+1].src=load.arguments[i];
+          }
+      }
+      function preload() {
+          // Cette fonction charge dans le cache toutes les images passées en paramètre
+          var temp=new load("./imgappli/hiero/img1.png",
+          "./imgappli/hiero/img2.png","./imgappli/hiero/img3.png",
+          "./imgappli/hiero/img4.png","./imgappli/hiero/img5.png",
+          "./imgappli/hiero/img6.png","./imgappli/hiero/img7.png",
+          "./imgappli/hiero/img8.png","./imgappli/hiero/img9.png",
+          "./imgappli/hiero/img10.png","./imgappli/hiero/img11.png",
+          "./imgfond/hieroglyphe.jpg","./imgfond/bateau.jpg")
+      }
+      </script>
+    <link rel="stylesheet" href="./style appli.css" />
+  </head>
+
+  <body id="body"  onload="preload()">
+    <div class="container" id="container">
+      <div class="header" id="header">
+        <div class="introTitle"><h2 id="h2Title">Le naufrage</h2>
+        </div>
+        <div class="introSubTitle" id="sub"> Inspiré par la Bible </br> 
+          Actes des apotres 27-28</div>
+      </div>
+      
+      <div class="introContent" id="introContent" >
+        <div class="introtuto" id="introtuto1"><button id="tuto" >Tutoriel du jeu</button></div>
+        <div class="introImg"id="introtuto2"><img id= imgintro src="./imgfond/intro.jpg" alt=""></div>
+        <div class="introCommencer" id="introtuto3"> <button id="commencer" >Commencer</button></div>
+      </div>
+      
+      <div class="footer" id="footer">
+        <div class="indice"><img src="./icone/indice.png" alt=""></div>
+        <div class="son">
+          <button id="muted"  ><img src="./icone/sound.png" alt=""></button></div>
+       <div id="next" >></div> <div class="next" id="nextFond"></div>
+      </div>
+      </div>
+
+
+
+
+
+
+
+
+<!-- ----------------------sons---------------------- -->
+ <audio id=myaudio control loop>
+  <source src="./son/port1.mp3">
+  </audio>
+<audio id=myaudio2>
+  <source src="./son/transition1.mp3">
+</audio>
+
+
+
+
+<!-------------- timer---------------->
+<div>
+  <div id="divTimer">
+    <p id="timer" ></p>
+  </div>
+      <img id="fondtimer" src="./icone/timer.png" alt="" />
+  </div>
+</div>
+
+</body>
+  <script src="index appli.js"></script>  
+  <script src="timer.js"></script> 
+
+</html>
