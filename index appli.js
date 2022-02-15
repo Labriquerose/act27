@@ -348,7 +348,8 @@ btnetape4.addEventListener("click", () => {
   document.querySelector(
   "body > div.container > div.introContent"
 ).innerHTML = `etape4`
-})
+});
+
 
 
       } else {
@@ -486,3 +487,20 @@ muted.addEventListener("click", () => {
   console.log(muted);
   toggleMute();
 });
+
+
+
+//------------------------------------------
+//fct prechargement image-------------------
+
+function load() {
+  this.length=load.arguments.length;
+  for (var i=0;i<this.length;i++) {
+      this[i+1]=new Image();
+      this[i+1].src=load.arguments[i];
+  }
+}
+function preload() {
+  // Cette fonction charge dans le cache toutes les images passées en paramètre
+  var temp=new load("./imgappli/hiero/img1.png","./imgappli/hiero/img2.png","./imgappli/hiero/img3.png")
+}

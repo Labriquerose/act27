@@ -5,11 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UnlockBible Actes 27, Le naufrage de Paul</title>
-
+    <script type="text/javascript">
+      function load() {
+          this.length=load.arguments.length;
+          for (var i=0;i<this.length;i++) {
+              this[i+1]=new Image();
+              this[i+1].src=load.arguments[i];
+          }
+      }
+      function preload() {
+          // Cette fonction charge dans le cache toutes les images passées en paramètre
+          var temp=new load("./imgappli/hiero/image1.png",
+          "./imgappli/hiero/image2.png","./imgappli/hiero/image3.png")
+      }
+      </script>
     <link rel="stylesheet" href="./style appli.css" />
   </head>
 
-  <body id="body">
+  <body id="body"  onload="preload()">
     <div class="container" id="container">
       <div class="header" id="header">
         <div class="introTitle"><h2 id="h2Title">Le naufrage</h2>
@@ -61,5 +74,6 @@
 
 </body>
   <script src="index appli.js"></script>  
-  <script src="timer.js"></script>  
+  <script src="timer.js"></script> 
+
 </html>
