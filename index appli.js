@@ -1029,7 +1029,7 @@ const choixImageHiero = () => {
                         fond.style.background = ``;
                         let fond6 = document.querySelector("#container");
                         fond6.style.background = `./imgfond/beauxport.jpg`;
-**************************************************************************************************************
+
                         //mise en place #
                       } else {
                         reponse.innerHTML =
