@@ -333,25 +333,22 @@ const choixImageHiero = () => {
         autoplay
         >
        <source src="./son/italie.mp3">`;
-// mise en place btnetape4
-let nextetape3 = document.getElementById("btnetape3");
-nextetape3.parentNode.removeChild(nextetape3);
-document.querySelector("#footer").innerHTML += `
+        // mise en place btnetape4
+        let nextetape3 = document.getElementById("btnetape3");
+        nextetape3.parentNode.removeChild(nextetape3);
+        document.querySelector("#footer").innerHTML += `
 <div class=fleche id="btnetape4" >></div>
 `;
-//supression etape3
-btnetape4.addEventListener("click", () => {
-  document.querySelector(
-   "body > div.container > div.introContent"
-  ).innerHTML = ``
-//rajout etape4
-  document.querySelector(
-  "body > div.container > div.introContent"
-).innerHTML = `etape4`
-});
-
-
-
+        //supression etape3
+        btnetape4.addEventListener("click", () => {
+          document.querySelector(
+            "body > div.container > div.introContent"
+          ).innerHTML = ``;
+          //rajout etape4
+          document.querySelector(
+            "body > div.container > div.introContent"
+          ).innerHTML = `etape4`;
+        });
       } else {
         reponse.innerHTML =
           "On ne se comprend pas, un problème d'accent peut être?";
@@ -488,19 +485,17 @@ muted.addEventListener("click", () => {
   toggleMute();
 });
 
-
-
 //------------------------------------------
 //fct prechargement image-------------------
 
-function load() {
-  this.length=load.arguments.length;
-  for (var i=0;i<this.length;i++) {
-      this[i+1]=new Image();
-      this[i+1].src=load.arguments[i];
-  }
-}
-function preload() {
-  // Cette fonction charge dans le cache toutes les images passées en paramètre
-  var temp=new load("./imgappli/hiero/img1.png","./imgappli/hiero/img2.png","./imgappli/hiero/img3.png")
-}
+// function load() {
+//   this.length=load.arguments.length;
+//   for (var i=0;i<this.length;i++) {
+//       this[i+1]=new Image();
+//       this[i+1].src=load.arguments[i];
+//   }
+// }
+// function preload() {
+//   // Cette fonction charge dans le cache toutes les images passées en paramètre
+//   var temp=new load("./imgappli/hiero/img1.png","./imgappli/hiero/img2.png","./imgappli/hiero/img3.png")
+// }
