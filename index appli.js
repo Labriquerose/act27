@@ -1027,10 +1027,80 @@ const choixImageHiero = () => {
                         //mise ne place fond
                         let fond = document.querySelector("#introContent");
                         fond.style.background = ``;
-                        let fond6 = document.querySelector("#container");
-                        fond6.style.background = `./imgfond/beauxport.jpg`;
-
+                        let fond6 = document.getElementById("body");
+                        fond6.style.background = `center top / contain no-repeat url("./imgfond/beauxport.jpg")`;
+                        let introContent =
+                          document.getElementById("introContent");
+                        introContent.style.gridTemplateAreas = ` "cont1"
+"cont2"
+"cont4"
+`;
+                        introContent.style.gridTemplateRows = "1fr 1fr 1fr ";
                         //mise en place #
+                        document.querySelector(
+                          "body > div.container > div.introContent"
+                        ).innerHTML = `
+                        
+                          
+                <div class="cont1">
+                <div class="instructions">
+                  <p>
+                    <img id="tuto" src="./icone/dialogue.png" alt="" /> 
+                    Vous prenez le bon vent et arrivez à Beaux ports,
+                     prenez la carte 51 et supprimez les cartes 17 et 34.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="cont2">
+                <div class="containerreponse">
+                  <p class="code" id=code>
+                         #
+                  </p>
+                  <input type="text" name="code" id="in6" class="code"placeholder="3 chiffres">
+                </div>
+              </div>
+              
+              
+              <div class="cont4">
+              <div class="instructions">
+              <p>
+                <img id="tuto" src="./icone/question.png" alt="" />Trouvez un numéro<br />
+                <i style="font-family: Inter;
+                font-style: italic;
+                font-weight: 300;
+                font-size: 0.9em;
+                line-height: 120%;
+                display: flex;
+                align-items: center;
+                text-align: center;""
+              
+                  >qui commence par #</i
+                >
+              </p>
+              </div>
+              </div>`;
+                        //validation #etape 6
+                        let etape6 = document.getElementById("btnetape6");
+                        etape6.addEventListener("click", () => {
+                          // Verif code
+                          const codeintro6 = 254;
+                          console.log(codeintro6);
+
+                          const propositionCode3 = () => {
+                            const chiffre16 =
+                              document.querySelector("#in6").value;
+                            console.log(chiffre16);
+                            if (chiffre16 == codeintro6) {
+                              console.log("yes");
+                            } else {
+                              console.log("nop");
+                            }
+                          };
+                          propositionCode3();
+                        });
+
+                        //----------------------------------
                       } else {
                         reponse.innerHTML =
                           "Qui peut naviguer contre les vent?";

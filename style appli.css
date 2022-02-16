@@ -8,7 +8,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
 
   display: grid;
@@ -242,7 +242,7 @@ p {
 .next {
   position: fixed;
   z-index: -13;
-  top: 89vh;
+  top: 84vh;
   left: 66vw;
   background-color: #ff6a70;
   border-radius: 25px 0px 0px 0;
@@ -274,12 +274,14 @@ p {
   justify-self: center;
   align-self: center;
   grid-area: cont1;
+  width: 100%;
 }
 
 .cont2 {
   justify-self: center;
   align-self: center;
   grid-area: cont2;
+  width: 100%;
 }
 
 .cont3 {
@@ -396,5 +398,4 @@ p {
 .flecheHaut {
   border: none;
   background-color: #b9bacf00;
-
 }
