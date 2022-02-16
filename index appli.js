@@ -1247,8 +1247,12 @@ const propositionCode3 = () => {
     document.querySelector("#footer").innerHTML += `
         <div class=fleche id="btnetape7" >></div>
         `;
+    // mise en page
 
     //ajouter img choix date
+    let fond8 = document.querySelector("body");
+    fond8.style.background = `center / contain no-repeat url("./imgfond/calendrier.jpg")`;
+    // appelle fct click img
   } else {
     mauvaiseReponseIntro();
   }
