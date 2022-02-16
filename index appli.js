@@ -32,6 +32,7 @@ const supIndex = () => {
 "cont4"
 "cont5"`;
 };
+
 const ajoutIntro = () => {
   introContent.style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr";
   document.querySelector(
@@ -1080,26 +1081,17 @@ const choixImageHiero = () => {
               </p>
               </div>
               </div>`;
-                        //validation #etape 6
-                        let etape6 = document.getElementById("btnetape6");
-                        etape6.addEventListener("click", () => {
-                          // Verif code
-                          const codeintro6 = 254;
-                          console.log(codeintro6);
+                        let nextetape7 = document.getElementById("btnetape6");
+                        nextetape7.parentNode.removeChild(nextetape7);
+                        document.querySelector("#footer").innerHTML += `
+              <div class=fleche id="btnetape7" >></div>
+              `;
 
-                          const propositionCode3 = () => {
-                            const chiffre16 =
-                              document.querySelector("#in6").value;
-                            console.log(chiffre16);
-                            if (chiffre16 == codeintro6) {
-                              console.log("yes");
-                            } else {
-                              console.log("nop");
-                            }
-                          };
+                        //validation #etape 6
+                        let etape1 = document.getElementById("btnetape7");
+                        etape1.addEventListener("click", () => {
                           propositionCode3();
                         });
-
                         //----------------------------------
                       } else {
                         reponse.innerHTML =
@@ -1241,6 +1233,27 @@ const ajoutEtape2 = () => {
   //fct choix img
   choixImageHiero();
 };
+// etape 7------------------------------------------
+const propositionCode3 = () => {
+  const code6 = 111;
+  let propoetape6 = document.querySelector("#in6").value;
+  if (propoetape6 == code6) {
+    //vider le fond
+    let fond7 = document.getElementById("body");
+    fond7.style.background = ``;
+    // cgt btn
+    let nextetape7 = document.getElementById("btnetape6");
+    nextetape7.parentNode.removeChild(nextetape7);
+    document.querySelector("#footer").innerHTML += `
+        <div class=fleche id="btnetape7" >></div>
+        `;
+
+    //ajouter img choix date
+  } else {
+    mauvaiseReponseIntro();
+  }
+};
+
 // -----------------------------------
 // Gestion son
 function toggleMute() {
