@@ -1242,21 +1242,113 @@ const propositionCode3 = () => {
     let fond7 = document.getElementById("body");
     fond7.style.background = ``;
     // cgt btn
-    let nextetape7 = document.getElementById("btnetape6");
+    let nextetape7 = document.getElementById("btnetape7");
     nextetape7.parentNode.removeChild(nextetape7);
-    document.querySelector("#footer").innerHTML += `
-        <div class=fleche id="btnetape7" >></div>
-        `;
-    // mise en page
 
-    //ajouter img choix date
-    let fond8 = document.querySelector("body");
-    fond8.style.background = `center / contain no-repeat url("./imgfond/calendrier.jpg")`;
+    document.querySelector("#footer").innerHTML += `
+        <div class=fleche id="btnetape8" >></div>
+        `;
+    // mise en page------------------------------------
+    document.querySelector(
+      "body > div.container > div.introContent"
+    ).innerHTML = `
+    
+      
+<div class="cont1">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" /> 
+Quand pouvons nous partir au plus tôt ?
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>cliquez sur la date de depart</i
+>
+</p>
+</div>
+</div>
+
+<div class="cont2">
+<map name="dateDeDepart" id="dateDeDepart">
+<area href="#" shape="rect" coords="231,164,283,200" id="bonneDate"  />
+<area href="#" shape="rect" coords="61,204,109,244" id="mauvaiseDate1" />
+
+<area href="#" shape="rect" coords="284,165,330,200" id="mauvaiseDate3"/>
+<area href="#" shape="rect" coords="12,165,382,399" id="mauvaiseDate2" />
+</map>
+
+<img src="./imgfond/calendrier.jpg" width="343" height="400 "
+ usemap="#dateDeDepart" border="0">
+ </div>
+
+<div class="cont4">
+<div class="instructions">
+<p id=questionContainer>
+<img id="tuto" src="./icone/question.png" alt="" />
+
+</p>
+</div>
+</div>
+
+`;
+
+
+    //ajouter img choix date---------------------------
+  clickdatecalendrier();
+
+
+//-------------------------------------------
     // appelle fct click img
   } else {
     mauvaiseReponseIntro();
   }
 };
+
+
+const clickdatecalendrier= ()=>{
+
+  const bonneDate = document.querySelector("#bonneDate")
+  const mauvaiseDate1 = document.getElementById('mauvaiseDate1');
+  
+  window.bonneDate.addEventListener("click", ()=>{
+    document.querySelector("#questionContainer").innerHTML = `
+    Nous partirons donc le 4, prenez la carte ...
+  `;
+
+    let nextetape8 = document.getElementById("btnetape8");
+    nextetape8.parentNode.removeChild(nextetape8);
+
+    document.querySelector("#footer").innerHTML += `
+        <div class=fleche  id="btnetape9" >></div>
+        `;
+    
+  
+  })
+window.mauvaiseDate1.addEventListener("click", ()=>{
+    document.querySelector("#questionContainer").innerHTML = `
+    oui mais on peut faire plus tôt...
+    
+    `;
+  })
+window.mauvaiseDate2.addEventListener("click", ()=>{
+  document.querySelector("#questionContainer").innerHTML = `
+    Non, qui pourrai naviguer dans ces conditions!
+    
+  `;
+})
+window.mauvaiseDate3.addEventListener("click", ()=>{
+  document.querySelector("#questionContainer").innerHTML = `
+  oui mais on peut faire plus tôt...
+  
+  `;
+})
+}
 
 // -----------------------------------
 // Gestion son
