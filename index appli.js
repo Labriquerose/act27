@@ -1503,7 +1503,48 @@ const etape13 = () => {
   //sup fond mer
   let fond13 = document.querySelector("#body");
   fond13.style.background = ``;
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+  
+    
+<div class="cont1">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" /> 
+Sur quelle corde tirer pour descendre les voiles?
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>cliquez sur la bonne corde</i
+>
+</p>
+</div>
+</div>
+
+<div class="cont2" id="voile">
+<map name="dateDeDepart" id="dateDeDepart">
+<area href="#" shape="rect" coords="284,233,323,271" id="bonnevoile"  />
+<area href="#" shape="rect" coords="1,1,333,352" id="mauvaisevoile" />
+
+</map>
+
+<img src="./imgfond/voile.jpg" width="349" height="370 "
+usemap="#dateDeDepart" border="0">
+</div>
+
+<div class="cont4">
+
+</div>
+`;
 };
+
 // -----------------------------------
 // Gestion son
 function toggleMute() {
