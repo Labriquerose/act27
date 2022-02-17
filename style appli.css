@@ -260,21 +260,13 @@ p {
   font-family: "Festive", cursive;
   visibility: hidden;
 }
-.fleche {
-  z-index: 1000;
-  bottom: 3.5vh;
-  text-align: center;
-  border: none;
-  color: whitesmoke;
-  font-size: 5em;
-  font-family: "Festive", cursive;
-}
 
 .cont1 {
+  position: relative;
   justify-self: center;
   align-self: center;
   grid-area: cont1;
-  width: 100%;
+  width: 90%;
 }
 
 .cont2 {
@@ -288,7 +280,7 @@ p {
   justify-self: center;
   align-self: center;
   grid-area: cont3;
-  width: 100%;
+  width: 90%;
 }
 
 .cont4 {
@@ -399,21 +391,57 @@ p {
   border: none;
   background-color: #b9bacf00;
 }
+.fleche {
+  padding: 12px 48px;
+  z-index: 1000;
+  bottom: 3.5vh;
+  text-align: center;
+  border: none;
+  color: whitesmoke;
+  font-size: 5em;
+  font-family: "Festive", cursive;
+}
+/* btn qui brille */
+.flecheshine {
+  padding: 12px 48px;
+  z-index: 1000;
+  bottom: 3.5vh;
+  text-align: center;
+  border: none;
+  color: whitesmoke;
+  font-size: 5em;
+  font-family: "Festive", cursive;
 
-@keyframes fleche {
+  background: linear-gradient(to right, #ffffff 0, #ff6a6f00 10%, #ffffff 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s infinite linear;
+  animation: shine 3s infinite linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+
+  text-decoration: none;
+  white-space: nowrap;
+}
+@-webkit-keyframes shine {
   0% {
-	background-color: purple;
+    background-position: 0;
   }
-  25% {
-	background-color: blue;
+  60% {
+    background-position: 200px;
   }
-  50% {
-	background-color: green;
-  }
-  75% {
-	background-color: yellow;
-  } 
   100% {
-	background-color: red;
+    background-position: 200px;
   }
+}
+
+video {
+  padding-top: 15vh;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  align-self: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
