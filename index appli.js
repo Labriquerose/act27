@@ -1530,7 +1530,7 @@ text-align: center;""
 
 <div class="cont2" id="voile">
 <map name="dateDeDepart" id="dateDeDepart">
-<area href="#" shape="rect" coords="284,233,323,271" id="bonnevoile"  />
+<area href="#" shape="rect" coords="284,233,353,291" id="bonnevoile"  />
 <area href="#" shape="rect" coords="1,1,333,352" id="mauvaisevoile" />
 
 </map>
@@ -1540,9 +1540,75 @@ usemap="#dateDeDepart" border="0">
 </div>
 
 <div class="cont4">
+<div class="instructions">
+<p id=questionContainer>
 
+
+</p>
+</div>
 </div>
 `;
+  clickvoile();
+};
+
+const clickvoile = () => {
+  window.bonnevoile.addEventListener("click", () => {
+    document.querySelector("#questionContainer").innerHTML = `
+    Super, c'etait la bonne, on peut passer à la suite! `;
+
+    let nextetape14 = document.getElementById("btnetape12");
+    nextetape14.parentNode.removeChild(nextetape14);
+
+    document.querySelector("#footer").innerHTML += `
+        <div class=flecheshine  id="btnetape14" >></div>
+        `;
+    clickbtnetape14();
+  });
+  window.mauvaisevoile.addEventListener("click", () => {
+    document.querySelector("#questionContainer").innerHTML = `
+    Non, essaie en une autre.
+    
+    `;
+  });
+};
+//Etape 14 la carte 9
+const clickbtnetape14 = () => {
+  let etape15 = document.getElementById("btnetape14");
+  etape15.addEventListener("click", () => {
+    //cgt btn
+    let nextetape15 = document.getElementById("btnetape14");
+    nextetape15.parentNode.removeChild(nextetape15);
+    document.querySelector("#footer").innerHTML += `
+<div class=flecheshine id="btnetape15" >></div>
+`;
+
+    let fond14 = document.querySelector("#body");
+    fond14.style.background = `center top / contain no-repeat url("./imgfond/9.jpg")`;
+
+    //mise ne page 9
+    document.querySelector(
+      "body > div.container > div.introContent"
+    ).innerHTML = `
+
+    
+    <div class="cont1">
+    <div class="instructions">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" /> 
+Prenez la carte 9 pour mieux voir!
+
+</div>
+</div>
+
+<div class="cont2">
+
+</div>
+
+
+</div>
+
+`;
+  });
 };
 
 // -----------------------------------
