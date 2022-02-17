@@ -399,3 +399,21 @@ p {
   border: none;
   background-color: #b9bacf00;
 }
+
+@keyframes fleche {
+  0% {
+	background-color: purple;
+  }
+  25% {
+	background-color: blue;
+  }
+  50% {
+	background-color: green;
+  }
+  75% {
+	background-color: yellow;
+  } 
+  100% {
+	background-color: red;
+  }
+}
