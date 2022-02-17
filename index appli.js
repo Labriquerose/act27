@@ -87,7 +87,7 @@ const ajoutIntro = () => {
       <p class="code" id=code>
         #
       </p>
-      <input type="text" name="code" id="in" class="code"placeholder="3 chiffres">
+      <input type="text" name="code" id="in" class="code" value=254 placeholder="3 chiffres">
     </div>
   </div>
     `;
@@ -386,7 +386,7 @@ const choixImageHiero = () => {
     <p class="code" id=code>
            #
     </p>
-    <input type="text" name="code" id="in" class="code"placeholder="3 chiffres">
+    <input type="text" name="code" id="in" value=475 class="code"placeholder="3 chiffres">
   </div>
 </div>
 
@@ -1058,7 +1058,7 @@ const choixImageHiero = () => {
                   <p class="code" id=code>
                          #
                   </p>
-                  <input type="text" name="code" id="in6" class="code"placeholder="3 chiffres">
+                  <input type="text" name="code" id="in6" value=111 class="code"placeholder="3 chiffres">
                 </div>
               </div>
               
