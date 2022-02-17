@@ -122,7 +122,7 @@ const validationIntro = () => {
   next.parentNode.removeChild(next);
 
   document.querySelector("#footer").innerHTML += `
-<div class=fleche id="btnetape2" >></div>
+<div class=flecheshine id="btnetape2" >></div>
 `;
 
   let etape2 = document.getElementById("btnetape2");
@@ -338,7 +338,7 @@ const choixImageHiero = () => {
         let nextetape3 = document.getElementById("btnetape3");
         nextetape3.parentNode.removeChild(nextetape3);
         document.querySelector("#footer").innerHTML += `
-<div class=fleche id="btnetape4" >></div>
+<div class=flecheshine id="btnetape4" >></div>
 `;
         //supression etape3
         btnetape4.addEventListener("click", () => {
@@ -1276,11 +1276,10 @@ text-align: center;""
 
 <div class="cont2">
 <map name="dateDeDepart" id="dateDeDepart">
-<area href="#" shape="rect" coords="231,164,283,200" id="bonneDate"  />
-<area href="#" shape="rect" coords="61,204,109,244" id="mauvaiseDate1" />
-
-<area href="#" shape="rect" coords="284,165,330,200" id="mauvaiseDate3"/>
-<area href="#" shape="rect" coords="12,165,382,399" id="mauvaiseDate2" />
+<area href="#" shape="rect" coords="235,164,280,205" id="bonneDate"  />
+<area href="#" shape="rect" coords="57,204,100,244" id="mauvaiseDate1" />
+<area href="#" shape="rect" coords="280,165,330,205" id="mauvaiseDate3"/>
+<area href="#" shape="rect" coords="0,0,382,399" id="mauvaiseDate2" />
 </map>
 
 <img src="./imgfond/calendrier.jpg" width="343" height="400 "
@@ -1298,58 +1297,213 @@ text-align: center;""
 
 `;
 
-
     //ajouter img choix date---------------------------
-  clickdatecalendrier();
+    clickdatecalendrier();
 
-
-//-------------------------------------------
+    //-------------------------------------------
     // appelle fct click img
   } else {
     mauvaiseReponseIntro();
   }
 };
 
-
-const clickdatecalendrier= ()=>{
-
-  const bonneDate = document.querySelector("#bonneDate")
-  const mauvaiseDate1 = document.getElementById('mauvaiseDate1');
-  
-  window.bonneDate.addEventListener("click", ()=>{
+const clickdatecalendrier = () => {
+  window.bonneDate.addEventListener("click", () => {
     document.querySelector("#questionContainer").innerHTML = `
-    Nous partirons donc le 4, prenez la carte ...
-  `;
+    Nous partirons donc le 4, prenez la carte ... `;
 
     let nextetape8 = document.getElementById("btnetape8");
     nextetape8.parentNode.removeChild(nextetape8);
 
     document.querySelector("#footer").innerHTML += `
-        <div class=fleche  id="btnetape9" >></div>
+        <div class=flecheshine  id="btnetape9" >></div>
         `;
-    
-  
-  })
-window.mauvaiseDate1.addEventListener("click", ()=>{
+    clickbtnetape9();
+  });
+  window.mauvaiseDate1.addEventListener("click", () => {
     document.querySelector("#questionContainer").innerHTML = `
     oui mais on peut faire plus tôt...
     
     `;
-  })
-window.mauvaiseDate2.addEventListener("click", ()=>{
-  document.querySelector("#questionContainer").innerHTML = `
+  });
+  window.mauvaiseDate2.addEventListener("click", () => {
+    document.querySelector("#questionContainer").innerHTML = `
     Non, qui pourrai naviguer dans ces conditions!
     
   `;
-})
-window.mauvaiseDate3.addEventListener("click", ()=>{
-  document.querySelector("#questionContainer").innerHTML = `
+  });
+  window.mauvaiseDate3.addEventListener("click", () => {
+    document.querySelector("#questionContainer").innerHTML = `
   oui mais on peut faire plus tôt...
   
   `;
-})
-}
+  });
+};
+// click btnetape9
+clickbtnetape9 = () => {
+  let etape10 = document.getElementById("btnetape9");
+  etape10.addEventListener("click", () => {
+    //mise ne page video navigation celeste
+    document.querySelector(
+      "body > div.container > div.introContent"
+    ).innerHTML = `
 
+    
+    <div class="cont1">
+    <div class="instructions">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" /> 
+Apprenez la navigation celeste
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>Ecouter c’est apprendre</i
+>
+</p>
+</div>
+</div>
+
+<div class="cont2">
+<video src="./imgfond/navigationceleste.mp4" type="video/mp4"></video>
+</div>
+
+
+</div>
+
+`;
+    // cgt btn
+    let nextetape10 = document.getElementById("btnetape9");
+    nextetape10.parentNode.removeChild(nextetape10);
+
+    document.querySelector("#footer").innerHTML += `
+    <div class=fleche id="btnetape10" >></div>
+    `;
+
+    //lancement video
+
+    let videoElem = document.querySelector("#introContent > div.cont2 > video");
+    let playButton = document.getElementById("btnetape10");
+
+    playButton.addEventListener("click", handlePlayButton, false);
+    playVideo();
+
+    async function playVideo() {
+      try {
+        await videoElem.play();
+        playButton.classList.add("playing");
+      } catch (err) {
+        playButton.classList.remove("playing");
+      }
+    }
+
+    function handlePlayButton() {
+      if (videoElem.paused) {
+        playVideo();
+      } else {
+        videoElem.pause();
+        playButton.classList.remove("playing");
+      }
+    }
+
+    //tempo btn chapitre II
+    setTimeout(() => {
+      let nextetape11 = document.getElementById("btnetape10");
+      nextetape11.parentNode.removeChild(nextetape11);
+
+      document.querySelector("#footer").innerHTML += `
+      <div class=flecheshine id="btnetape11" >></div>
+      `;
+      clicketape10();
+    }, 100);
+    //a regler a 30 000
+
+    //fin de chapite
+  });
+};
+
+//CHAPITRE II------------------------------------
+//Etape 11----------------------------------------
+
+const clicketape10 = () => {
+  //mise en page
+  let etape11 = document.getElementById("btnetape11");
+  etape11.addEventListener("click", () => {
+    //chgt btn
+    let nextetape12 = document.getElementById("btnetape11");
+    nextetape12.parentNode.removeChild(nextetape12);
+    document.querySelector("#footer").innerHTML += `
+    <div class=fleche id="btnetape12" >></div>
+    `;
+
+    //cgt titre
+    document.querySelector("#header > div > h3").innerHTML = `
+    La tempête
+    `;
+
+    //tempete fond
+    let fond12 = document.querySelector("#body");
+    fond12.style.background = `center top / contain no-repeat url("./imgfond/mer.jpg")`;
+    // tempete #
+    document.querySelector(
+      "body > div.container > div.introContent"
+    ).innerHTML = `  
+  <div class="cont2">
+    <div class="containerreponse">
+      <p class="code" id=code>
+             #
+      </p>
+      <input type="text" name="code" id="in" value=111 class="code"placeholder="3 chiffres">
+    </div>
+  </div>
+  
+  
+  <div class="cont4">
+  <div class="instructions">
+  <p>
+    <img id="tuto" src="./icone/question.png" alt="" />Trouvez un numéro<br />
+    <i style="font-family: Inter;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9em;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;""
+  
+      >qui commence par #</i
+    >
+  </p>
+  </div>
+  </div>
+`;
+    // fonction verif code
+    let etape12 = document.getElementById("btnetape12");
+    etape12.addEventListener("click", () => {
+      const code11 = 111;
+      const codeetape11 = () => {
+        let chiffre11 = document.getElementById("in").value;
+        if (chiffre11 == code11) {
+          etape13();
+        } else {
+          mauvaiseReponseIntro();
+        }
+      };
+      codeetape11();
+    });
+  });
+};
+
+const etape13 = () => {
+  //sup fond mer
+  let fond13 = document.querySelector("#body");
+  fond13.style.background = ``;
+};
 // -----------------------------------
 // Gestion son
 function toggleMute() {
