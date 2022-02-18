@@ -274,6 +274,7 @@ p {
   align-self: center;
   grid-area: cont2;
   width: 100%;
+  margin: 0 auto;
 }
 
 .cont3 {
@@ -449,4 +450,34 @@ video {
 #voile {
   padding-top: 20vh;
   padding-bottom: 18vh;
+}
+
+#codecabine{
+  width: 80px;
+  position:relative;
+  top: -180px;
+  left:-15px;
+
+}
+#tuto2{
+  margin: auto;
+  width: 373px;
+  height: 361px;  
+}
+.instructions2 {
+ position: relative;
+ top:2vh;
+  border-radius: 12px;
+  width: 70px;
+  text-align: center;
+height: 40px;
+  background-color: #ffffffc0;
+  margin: 10px auto 10px;
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.021);
+  padding: 10px;
+}
+
+#in16{
+  
+  text-align: center; 
 }

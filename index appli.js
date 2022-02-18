@@ -1601,15 +1601,156 @@ Prenez la carte 9 pour mieux voir!
 </div>
 
 <div class="cont2">
-
+ 
 </div>
 
 
 </div>
 
 `;
+
+
+let etape16 = document.getElementById("btnetape15");
+  etape16.addEventListener("click", () => {
+clicketape16();
+})
+
+
+
   });
 };
+
+//etape 15 -----------------------
+const clicketape16 = ()=>{
+ //cgt btn
+ let nextetape16 = document.getElementById("btnetape15");
+ nextetape16.parentNode.removeChild(nextetape16);
+ document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape16" >></div>
+`;
+let fond162 = document.querySelector("#body")
+fond162.style.background = 'top 50% right 50% / contain no-repeat url("./imgappli/cabine.jpg")'
+
+
+
+ // cabine capitaine
+ document.querySelector(
+  "body > div.container > div.introContent"
+).innerHTML = `  
+<div class="cont1">
+
+</div>
+
+
+
+
+<div class="cont2">
+    <div class="instructions2">
+    <input type="text" name="code" id="in16" value=1492 class="code"placeholder="3 chiffres">
+    </div>
+  </div>
+
+
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Trouvez le code pour rentrer dans la cabine du capitaine<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+  >en 4 chiffres</i
+>
+</p>
+</div>
+</div>
+`;
+//validation code cabine
+validationcodecabine();
+
+}
+
+
+const validationcodecabine=()=>{
+
+  let etape17 = document.getElementById("btnetape16");
+          etape17.addEventListener("click", () => {
+            // Verif code
+            const codecabine = 1492;
+            const validationcodecabine2 = () => {
+              let chiffre16 = document.getElementById("in16").value;
+
+              if (chiffre16 == codecabine) {
+                //intégration etape5 etape vent
+               etape18();
+                 
+                } else {
+                  document.querySelector("#introContent > div.cont4 > div").innerHTML = `
+                  <p>
+                  <img id="tuto" src="./icone/tuto.png" alt="" />
+                  Non, vous devriez mieux regarder les cartes...
+                  </p>
+                  `;
+                }
+              };
+              validationcodecabine2();
+})}
+
+const etape18 =()=>{
+//chgt btn
+let nextetape18 = document.getElementById("btnetape16");
+          nextetape18.parentNode.removeChild(nextetape18);
+          document.querySelector("#footer").innerHTML += `
+<div class=flecheshine id="btnetape18" >></div>`
+//cgt back
+let fond3 = document.getElementById("body");
+          fond3.style.background = `center top / contain no-repeat url("./imgfond/capitaine.jpg")`;
+//chgt content
+document.querySelector(
+  "body > div.container > div.introContent"
+).innerHTML = `  
+<div class="cont1">
+
+</div>
+
+
+
+
+<div class="cont2">
+    
+  </div>
+
+
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" />Supprimez les cartes 9, 20, 75 et 17.
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+  ></i
+>
+</p>
+</div>
+</div>
+`;
+
+}
 
 // -----------------------------------
 // Gestion son
