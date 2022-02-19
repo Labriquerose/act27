@@ -2565,5 +2565,44 @@ const etape39 = () => {
   let fond = document.getElementById("body");
   fond.style.background = `center top / contain no-repeat url("./imgfond/malte.jpg")`;
 
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+ 
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+<div class="containerreponse">
+<p class="code" id=code>
+#
+</p>
+<input type="text" name="code" id="in20" value=954 class="code"placeholder="3 chiffres">
+</div>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Trouvez une séquence qui se repete<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;
+
+>Des couleurs peut être?</i
+>
+</p>
+</div>
+</div>`;
+
   //fin etape 39
 };
