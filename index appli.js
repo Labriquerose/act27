@@ -1609,34 +1609,29 @@ Prenez la carte 9 pour mieux voir!
 
 `;
 
-
-let etape16 = document.getElementById("btnetape15");
-  etape16.addEventListener("click", () => {
-clicketape16();
-})
-
-
-
+    let etape16 = document.getElementById("btnetape15");
+    etape16.addEventListener("click", () => {
+      clicketape16();
+    });
   });
 };
 
 //etape 15 -----------------------
-const clicketape16 = ()=>{
- //cgt btn
- let nextetape16 = document.getElementById("btnetape15");
- nextetape16.parentNode.removeChild(nextetape16);
- document.querySelector("#footer").innerHTML += `
+const clicketape16 = () => {
+  //cgt btn
+  let nextetape16 = document.getElementById("btnetape15");
+  nextetape16.parentNode.removeChild(nextetape16);
+  document.querySelector("#footer").innerHTML += `
 <div class=fleche id="btnetape16" >></div>
 `;
-let fond162 = document.querySelector("#body")
-fond162.style.background = 'top 50% right 50% / contain no-repeat url("./imgappli/cabine.jpg")'
+  let fond162 = document.querySelector("#body");
+  fond162.style.background =
+    'top 50% right 50% / contain no-repeat url("./imgappli/cabine.jpg")';
 
-
-
- // cabine capitaine
- document.querySelector(
-  "body > div.container > div.introContent"
-).innerHTML = `  
+  // cabine capitaine
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `  
 <div class="cont1">
 
 </div>
@@ -1672,50 +1667,47 @@ text-align: center;""
 </div>
 </div>
 `;
-//validation code cabine
-validationcodecabine();
+  //validation code cabine
+  validationcodecabine();
+};
 
-}
-
-
-const validationcodecabine=()=>{
-
+const validationcodecabine = () => {
   let etape17 = document.getElementById("btnetape16");
-          etape17.addEventListener("click", () => {
-            // Verif code
-            const codecabine = 1492;
-            const validationcodecabine2 = () => {
-              let chiffre16 = document.getElementById("in16").value;
+  etape17.addEventListener("click", () => {
+    // Verif code
+    const codecabine = 1492;
+    const validationcodecabine2 = () => {
+      let chiffre16 = document.getElementById("in16").value;
 
-              if (chiffre16 == codecabine) {
-                //intégration etape5 etape vent
-               etape18();
-                 
-                } else {
-                  document.querySelector("#introContent > div.cont4 > div").innerHTML = `
+      if (chiffre16 == codecabine) {
+        //intégration etape5 etape vent
+        etape18();
+      } else {
+        document.querySelector("#introContent > div.cont4 > div").innerHTML = `
                   <p>
                   <img id="tuto" src="./icone/tuto.png" alt="" />
                   Non, vous devriez mieux regarder les cartes...
                   </p>
                   `;
-                }
-              };
-              validationcodecabine2();
-})}
+      }
+    };
+    validationcodecabine2();
+  });
+};
 
-const etape18 =()=>{
-//chgt btn
-let nextetape18 = document.getElementById("btnetape16");
-          nextetape18.parentNode.removeChild(nextetape18);
-          document.querySelector("#footer").innerHTML += `
-<div class=flecheshine id="btnetape18" >></div>`
-//cgt back
-let fond3 = document.getElementById("body");
-          fond3.style.background = `center top / contain no-repeat url("./imgfond/capitaine.jpg")`;
-//chgt content
-document.querySelector(
-  "body > div.container > div.introContent"
-).innerHTML = `  
+const etape18 = () => {
+  //chgt btn
+  let nextetape18 = document.getElementById("btnetape16");
+  nextetape18.parentNode.removeChild(nextetape18);
+  document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape18" >></div>`;
+  //cgt back
+  let fond3 = document.getElementById("body");
+  fond3.style.background = `center top / contain no-repeat url("./imgfond/capitaine.jpg")`;
+  //chgt content
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `  
 <div class="cont1">
 
 </div>
@@ -1749,22 +1741,829 @@ text-align: center;""
 </div>
 </div>
 `;
+  // sup btn le tps de voir le 87
+  let nextetape20 = document.getElementById("btnetape18");
+  nextetape20.parentNode.removeChild(nextetape20);
+  // au bout de 15 sec ré-afficher le next
+  setTimeout(() => {
+    document.querySelector("#footer").innerHTML += `
+<div class=flecheshine id="btnetape20" >></div>`;
 
-}
+    //on click etape 20
+    let etape20 = document.getElementById("btnetape20");
+    etape20.addEventListener("click", () => {
+      etape21();
+    });
+  }, 1000);
+};
 
-// -----------------------------------
-// Gestion son
-function toggleMute() {
-  var audio = document.getElementById("myaudio");
+const etape21 = () => {
+  //chgt btn
+  let nextetape21 = document.getElementById("btnetape20");
+  nextetape21.parentNode.removeChild(nextetape21);
+  document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape21" >></div>
+`;
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "whitesmoke";
+  //cgt image fond
+  let fond20 = document.getElementById("body");
+  fond20.style.background = `center top / contain no-repeat url("./imgfond/mer2.jpg")`;
 
-  if (audio.muted) {
-    audio.muted = false;
-  } else {
-    audio.muted = true;
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+  
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+<div class="containerreponse">
+<p class="code" id=code>
+ #
+</p>
+<input type="text" name="code" id="in20" value=000 class="code"placeholder="3 chiffres">
+</div>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Trouvez un numéro<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>qui commence par #</i
+>
+</p>
+</div>
+</div>`;
+  //on click 21
+  let etape22 = document.getElementById("btnetape21");
+  etape22.addEventListener("click", () => {
+    etapeValide22();
+  });
+  //recup le in et valider
+  const etapeValide22 = () => {
+    const code22 = 000;
+    const propositionCode = () => {
+      let chiffre22 = document.getElementById("in20").value;
+
+      if (chiffre22 == code22) {
+        etape23();
+      } else {
+        mauvaiseReponseIntro();
+      }
+    };
+    propositionCode();
+  };
+  //fin etape 20
+};
+const etape23 = () => {
+  let nextetape23 = document.getElementById("btnetape21");
+  nextetape23.parentNode.removeChild(nextetape23);
+  document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape23" >></div>
+`;
+  let fond23 = document.getElementById("body");
+  fond23.style.background = `center top / contain no-repeat url("./imgfond/sonde20m.jpg")`;
+
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+  
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+<div class="containerreponse">
+<input type="text" name="code" id="in22" value=20 class="code"placeholder="2 chiffres">
+
+</div><p class="metre" id=metre>
+mètres
+</p>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Nous approchons de la terre,
+combien reste t'il de fond avant de nous échouer ? </br>
+Suprimez les cartes 55, 32.
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+></i
+>
+</p>
+</div>
+</div>`;
+  //on click verif
+  // fonction verif code
+  let etape24 = document.getElementById("btnetape23");
+  etape24.addEventListener("click", () => {
+    const code24 = 20;
+    const codeetape24 = () => {
+      let chiffre24 = document.getElementById("in22").value;
+      if (chiffre24 == code24) {
+        etape25();
+      } else {
+        mauvaiseReponseIntro();
+      }
+    };
+    codeetape24();
+  });
+};
+
+const etape25 = () => {
+  //chgt btn
+  let nextetape22 = document.getElementById("btnetape23");
+  nextetape22.parentNode.removeChild(nextetape22);
+  document.querySelector("#footer").innerHTML += `
+  <div class=fleche id="btnetape24" >></div>
+  `;
+
+  //cgt img fond
+  let fond25 = document.getElementById("body");
+  fond25.style.background = `center top / contain no-repeat url("./imgfond/sonde15m.jpg")`;
+  // content
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+<div class="containerreponse">
+<input type="text" name="code" id="in22" value=15 class="code"placeholder="2 chiffres">
+
+</div><p class="metre" id=metre>
+mètres
+</p>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />
+Nous nous apronchons de la terre, et maintenant, 
+la sonde est à quelle profondeur ? 
+
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+></i
+>
+</p>
+</div>
+</div>`;
+
+  //on click verif
+  // fonction verif code
+  let etape26 = document.getElementById("btnetape24");
+  etape26.addEventListener("click", () => {
+    const code26 = 15;
+    const codeetape26 = () => {
+      let chiffre26 = document.getElementById("in22").value;
+      if (chiffre26 == code26) {
+        etape27();
+      } else {
+        mauvaiseReponseIntro();
+      }
+    };
+    codeetape26();
+  });
+};
+
+//etape26
+
+const etape27 = () => {
+  //chgt btn
+  let nextetape28 = document.getElementById("btnetape24");
+  nextetape28.parentNode.removeChild(nextetape28);
+  document.querySelector("#footer").innerHTML += `
+<div class=flecheshine id="btnetape28" >></div>
+`;
+  //cgt img fond
+  let fond = document.getElementById("body");
+  fond.style.background = `center top / contain no-repeat url("./imgfond/cabine.jpg")`;
+  // content
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" />
+<h4>Paul: “Mangeons et reprenons des forces avant de débarquer!”</h4>
+
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+></i
+>
+</p>
+</div>
+</div>`;
+
+  //on click
+  let etape28 = document.getElementById("btnetape28");
+  etape28.addEventListener("click", () => {
+    etape29();
+  });
+};
+
+const etape29 = () => {
+  //chgt btn
+  let nextetape29 = document.getElementById("btnetape28");
+  nextetape29.parentNode.removeChild(nextetape29);
+  document.querySelector("#footer").innerHTML += `
+  <div class=fleche id="btnetape29" >></div>
+  `;
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "#ff6a70";
+  //cgt img fond
+  let fond20 = document.getElementById("body");
+  fond20.style.background = ``;
+
+  //mise en place content
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Combien sommes nous sur le bateau ?<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+></i
+>
+</p>
+</div>
+
+</div>
+
+<div class="cont2">
+
+<img id="" src="./imgappli/nombre.jpg" alt="" />
+
+
+</div>
+
+<div class="cont4">
+<div class="containerreponse2">
+<p class="code" id=code>
+
+</p>
+<input type="text" name="code" id="in29" value=276 class="code"placeholder="3 chiffres">
+</div>
+
+
+</div>`;
+
+  //on click verif
+  // fonction verif code
+  let etape24 = document.getElementById("btnetape29");
+  etape24.addEventListener("click", () => {
+    const code = 276;
+    const codeetape = () => {
+      let chiffre = document.getElementById("in29").value;
+      if (chiffre == code) {
+        etape30();
+      } else {
+        mauvaiseReponseIntro();
+      }
+    };
+    codeetape();
+  });
+
+  //fin etape 29
+};
+
+const etape30 = () => {
+  //content la tempete
+  //chgt btn
+  let nextetape30 = document.getElementById("btnetape29");
+  nextetape30.parentNode.removeChild(nextetape30);
+  document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape30" >></div>
+`;
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "whitesmoke";
+  //cgt image fond
+  let fond20 = document.getElementById("body");
+  fond20.style.background = `center top / contain no-repeat url("./imgfond/mer2.jpg")`;
+
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+ 
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+<div class="containerreponse">
+<p class="code" id=code>
+#
+</p>
+<input type="text" name="code" id="in20" value=682 class="code"placeholder="3 chiffres">
+</div>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Trouvez un numéro<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>qui commence par #</i
+>
+</p>
+</div>
+</div>`;
+  //on click 21
+  let etape30 = document.getElementById("btnetape30");
+  etape30.addEventListener("click", () => {
+    etapeValide30();
+  });
+  //recup le in et valider
+  const etapeValide30 = () => {
+    const code = 682;
+    const propositionCode = () => {
+      let chiffre = document.getElementById("in20").value;
+
+      if (chiffre == code) {
+        etape31();
+      } else {
+        mauvaiseReponseIntro();
+      }
+    };
+    propositionCode();
+  };
+
+  //fin etape30
+};
+
+const etape31 = () => {
+  //chgt btn
+  let nextetape31 = document.getElementById("btnetape30");
+  nextetape31.parentNode.removeChild(nextetape31);
+
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "#ff6a70";
+  //cgt img fond
+  let fond20 = document.getElementById("body");
+  fond20.style.background = `center top / contain no-repeat url("./imgfond/capitaineordre.jpg")`;
+
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" />
+Ecoutez bien les ordres!
+
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+></i
+>
+</p>
+</div>
+</div>
+
+<div class="cont2">
+<img id="playaudio" class="flechshine" src="./icone/playordre.png" alt="" />
+<audio src="./son/ordre.mp3" type="audio/mp3"></audio>
+</div>
+
+
+<div class="cont4">
+
+</div>`;
+
+  // play ordre
+
+  //lancement audio
+
+  let audioElem = document.querySelector("#introContent > div.cont2 > audio");
+  let playButton = document.getElementById("playaudio");
+
+  playButton.addEventListener("click", handlePlayButton, false);
+  playAudio();
+
+  async function playAudio() {
+    try {
+      await audioElem.play();
+      playButton.classList.add("playing");
+    } catch (err) {
+      playButton.classList.remove("playing");
+    }
   }
-}
-let muted = document.getElementById("muted");
-muted.addEventListener("click", () => {
-  console.log(muted);
-  toggleMute();
-});
+
+  function handlePlayButton() {
+    if (audioElem.paused) {
+      playAudio();
+    } else {
+      audioElem.pause();
+      playButton.classList.remove("playing");
+    }
+  }
+  // time out rep
+  setTimeout(() => {
+    document.querySelector(
+      "#introContent > div.cont4"
+    ).innerHTML = `<div class="containerreponse2">
+<p class="code" id=code>
+
+</p>
+<input type="text" name="code" id="in29" value=7682 class="code"placeholder="4 chiffres">
+</div>`;
+
+    document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape31" >></div>
+`;
+    //on click verif
+    // fonction verif code
+    let etape32 = document.getElementById("btnetape31");
+    etape32.addEventListener("click", () => {
+      const code = 7682;
+      const codeetape = () => {
+        let chiffre = document.getElementById("in29").value;
+        if (chiffre == code) {
+          etape33();
+        } else {
+          document.querySelector(
+            "#introContent > div.cont1 > div > p"
+          ).innerHTML = `Ré-ecoutez </br> les ordres correctement!`;
+        }
+      };
+      codeetape();
+    });
+  }, 300);
+
+  // fin etape 31
+};
+
+//  CHAPITRE 3-------------------------------------------------------------------------------
+//***************************************************************************************** */
+//etape 33
+
+const etape33 = () => {
+  // cgt btn
+  let nextetape33 = document.getElementById("btnetape31");
+  nextetape33.parentNode.removeChild(nextetape33);
+
+  document.querySelector("#footer").innerHTML += `
+    <div class=flecheshine id="btnetape33" >></div>
+    `;
+
+  //cgt titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "whitesmoke";
+  document.querySelector("#header > div > h3").innerHTML = `
+    L'île de Malte
+    `;
+
+  //tempete fond
+  let fond = document.querySelector("#body");
+  fond.style.background = `center top / contain no-repeat url("./imgfond/malteechoue.jpg")`;
+  // tempete #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `  
+  <div class="cont2">
+   <audio src="./son/transition2.mp3" type="audio/mp3"></audio>
+  </div>
+  
+  
+  <div class="cont4">
+  <div class="instructions">
+  <p>
+    <img id="tuto" src="./icone/question.png" alt="" />Ceux qui savaient nager ont sauté en premier , les autres se sont accrochés à ce qu'ils on pu, et tous sont arrivés saint et sauf sur une île nommée Malte.
+    Prenez la carte 18. <br />
+    <i style="font-family: Inter;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9em;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;""
+  
+      >Supprimez les 57, 87, 28 et 81.</i
+    >
+  </p>
+  </div>
+  </div>
+`;
+
+  //son transition
+  let audioElem = document.querySelector("#introContent > div.cont2 > audio");
+  let playButton = document.getElementById("muted");
+
+  playButton.addEventListener("click", handlePlayButton, false);
+  playAudio();
+
+  async function playAudio() {
+    try {
+      await audioElem.play();
+      playButton.classList.add("playing");
+    } catch (err) {
+      playButton.classList.remove("playing");
+    }
+  }
+
+  function handlePlayButton() {
+    if (audioElem.paused) {
+      playAudio();
+    } else {
+      audioElem.pause();
+      playButton.classList.remove("playing");
+    }
+  }
+  let etape34 = document.getElementById("btnetape33");
+  etape34.addEventListener("click", () => {
+    etape35();
+  });
+  //fin etape 33
+};
+
+//etape 35
+const etape35 = () => {
+  //content la tempete
+  //chgt btn
+  let nextetape35 = document.getElementById("btnetape33");
+  nextetape35.parentNode.removeChild(nextetape35);
+  document.querySelector("#footer").innerHTML += `
+<div class=fleche id="btnetape36" >></div>
+`;
+
+  //cgt image fond
+  let fond20 = document.getElementById("body");
+  fond20.style.background = `center top / contain no-repeat url("./imgfond/malte2.jpg")`;
+
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+ 
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+<div class="containerreponse">
+<p class="code" id=code>
+#
+</p>
+<input type="text" name="code" id="in20" value=954 class="code"placeholder="3 chiffres">
+</div>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Trouvez un numéro<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>qui commence par #</i
+>
+</p>
+</div>
+</div>`;
+  //on click 21
+  let etape36 = document.getElementById("btnetape36");
+  etape36.addEventListener("click", () => {
+    etapeValide36();
+  });
+  //recup le in et valider
+  const etapeValide36 = () => {
+    const code = 954;
+    const propositionCode = () => {
+      let chiffre = document.getElementById("in20").value;
+
+      if (chiffre == code) {
+        etape37();
+      } else {
+        mauvaiseReponseIntro();
+      }
+    };
+    propositionCode();
+  };
+
+  //fin etape 35
+};
+
+//etape 37
+
+const etape37 = () => {
+  //content
+  //chgt btn
+  let nextetape36 = document.getElementById("btnetape36");
+  nextetape36.parentNode.removeChild(nextetape36);
+
+  setTimeout(() => {
+    document.querySelector("#footer").innerHTML += `
+<div class=flecheshine id="btnetape37" >></div>
+`;
+    document.getElementById("viper").innerHTML = `
+<audio src="./son/ding.mp3" type="audio/mp3"></audio>
+`;
+    //son viper fin
+    let audioElem = document.querySelector("#viper > audio");
+    let playButton = document.getElementById("muted");
+
+    playButton.addEventListener("click", handlePlayButton, false);
+    playAudio();
+
+    async function playAudio() {
+      try {
+        await audioElem.play();
+        playButton.classList.add("playing");
+      } catch (err) {
+        playButton.classList.remove("playing");
+      }
+    }
+
+    function handlePlayButton() {
+      if (audioElem.paused) {
+        playAudio();
+      } else {
+        audioElem.pause();
+        playButton.classList.remove("playing");
+      }
+    }
+    let etape38 = document.getElementById("btnetape37");
+    etape38.addEventListener("click", () => {
+      etape39();
+    });
+    //fin son
+
+    document.querySelector(
+      "#introContent > div.cont1 > div > h4"
+    ).innerHTML = `Oui il a survécu après avoir longtemps attendu il ne s'est rien passé! Prenez la carte 24 et 77`;
+  }, 500);
+
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "#ff6a70";
+  //cgt image fond
+  let fond20 = document.getElementById("body");
+  fond20.style.background = ``;
+
+  //mise en page
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+<div class="instructions">
+<h4>Paul viens de se faire mordre par une vipere...Attendons de voir ce qui va se passer!</h4>
+</div>
+</div>
+
+<div class="cont2">
+<img src="./imgfond/serpent.jpg" alt="" />
+</div>
+
+
+<div class="cont4">
+<div  id="viper">
+<audio src="./son/tick.mp3" type="audio/mp3"></audio>
+</div>
+</div>`;
+
+  //son viper
+  let audioElem = document.querySelector("#viper > audio");
+  let playButton = document.getElementById("muted");
+
+  playButton.addEventListener("click", handlePlayButton, false);
+  playAudio();
+
+  async function playAudio() {
+    try {
+      await audioElem.play();
+      playButton.classList.add("playing");
+    } catch (err) {
+      playButton.classList.remove("playing");
+    }
+  }
+
+  function handlePlayButton() {
+    if (audioElem.paused) {
+      playAudio();
+    } else {
+      audioElem.pause();
+      playButton.classList.remove("playing");
+    }
+  }
+  //fin son
+
+  //fin etape 37
+};
+
+const etape39 = () => {
+  //chgt btn
+  let nextetape39 = document.getElementById("btnetape33");
+  nextetape39.parentNode.removeChild(nextetape39);
+  document.querySelector("#footer").innerHTML += `
+ <div class=fleche id="btnetape36" >></div>
+ `;
+
+  //cgt image fond
+  let fond = document.getElementById("body");
+  fond.style.background = `center top / contain no-repeat url("./imgfond/malte.jpg")`;
+
+  //fin etape 39
+};

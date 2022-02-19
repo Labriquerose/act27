@@ -452,32 +452,74 @@ video {
   padding-bottom: 18vh;
 }
 
-#codecabine{
+#codecabine {
   width: 80px;
-  position:relative;
+  position: relative;
   top: -180px;
-  left:-15px;
-
+  left: -15px;
 }
-#tuto2{
+#tuto2 {
   margin: auto;
   width: 373px;
-  height: 361px;  
+  height: 361px;
 }
 .instructions2 {
- position: relative;
- top:2vh;
+  position: relative;
+  top: 2vh;
   border-radius: 12px;
   width: 70px;
   text-align: center;
-height: 40px;
+  height: 40px;
   background-color: #ffffffc0;
   margin: 10px auto 10px;
   box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.021);
   padding: 10px;
 }
 
-#in16{
-  
-  text-align: center; 
+#in16 {
+  text-align: center;
+}
+
+.metre {
+  position: relative;
+  top: -5px;
+  width: 70px;
+  margin: auto auto;
+}
+#metre {
+  position: relative;
+  left: 30px;
+  top: -50px;
+  text-align: right;
+  width: 100px;
+  height: 15px;
+  color: #b9bacf;
+}
+#in20 {
+  width: 30px;
+  text-align: center;
+  left: 0px;
+  top: -2pxx;
+}
+#in22 {
+  width: 30px;
+  text-align: center;
+  left: 0px;
+  top: 6px;
+}
+.containerreponse2 {
+  padding: 5px;
+  color: #b9bacfc4;
+  text-align: center;
+  margin: auto auto;
+
+  height: 45px;
+  background: rgba(19, 18, 37, 0.74);
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px auto 10px;
+  width: 200px;
+}
+#in29 {
+  text-align: center;
 }
