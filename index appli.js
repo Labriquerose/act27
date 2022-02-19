@@ -2555,11 +2555,13 @@ const etape37 = () => {
 
 const etape39 = () => {
   //chgt btn
-  let nextetape39 = document.getElementById("btnetape33");
+  let nextetape39 = document.getElementById("btnetape37");
   nextetape39.parentNode.removeChild(nextetape39);
   document.querySelector("#footer").innerHTML += `
- <div class=fleche id="btnetape36" >></div>
+ <div class=flecheshine id="btnetape36" >></div>
  `;
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "whitesmoke";
 
   //cgt image fond
   let fond = document.getElementById("body");
@@ -2572,20 +2574,6 @@ const etape39 = () => {
 
  
 <div class="cont1">
-
-</div>
-
-<div class="cont2">
-<div class="containerreponse">
-<p class="code" id=code>
-#
-</p>
-<input type="text" name="code" id="in20" value=954 class="code"placeholder="3 chiffres">
-</div>
-</div>
-
-
-<div class="cont4">
 <div class="instructions">
 <p>
 <img id="tuto" src="./icone/question.png" alt="" />Trouvez une séquence qui se repete<br />
@@ -2596,13 +2584,35 @@ font-size: 0.9em;
 line-height: 120%;
 display: flex;
 align-items: center;
-text-align: center;
+text-align: center;""
 
->Des couleurs peut être?</i
+>des couleurs peut etre?</i
 >
 </p>
 </div>
+</div>
+
+<div class="cont2">
+
+</div>
+
+
+<div class="cont4">
+
 </div>`;
 
+  let finEtape39 = document.getElementById("btnetape36");
+  finEtape39.addEventListener("click", () => {
+    etape40();
+  });
+
   //fin etape 39
+};
+
+const etape40 = () => {
+  //replt btn
+  let finEtape39 = document.getElementById("btnetape36");
+  finEtape39.parentNode.removeChild(finEtape39);
+  document.querySelector("#footer").innerHTML += `
+  <div class=fleche id="btnetape40" >></div>
 };
