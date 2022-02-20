@@ -2601,10 +2601,7 @@ text-align: center;""
 
 </div>`;
 
-  let finEtape39 = document.getElementById("btnetape36");
-  finEtape39.addEventListener("click", () => {
-    etape40();
-  });
+  etape40();
 
   //fin etape 39
 };
@@ -2614,5 +2611,261 @@ const etape40 = () => {
   let finEtape39 = document.getElementById("btnetape36");
   finEtape39.parentNode.removeChild(finEtape39);
   document.querySelector("#footer").innerHTML += `
-  <div class=fleche id="btnetape40" >></div>
+  <div class=fleche id="btnetape40" >></div>`;
+
+  // choix couleur
+
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+<div class="choixImg">
+<div class="fleche1">
+  <button class="flecheHaut" id="fleche1" type="">
+    <img class="flecheHaut" src="./icone/flecheImg.png" alt="" />
+  </button>
+</div>
+<div class="fleche2">
+  <button class="flecheHaut" id="fleche2" type="">
+    <img class="flecheHaut" src="./icone/flecheImg.png" alt="" />
+  </button>
+</div>
+<div class="fleche3">
+  <button class="flecheHaut" id="fleche3" type="">
+    <img class="flecheHaut" src="./icone/flecheImg.png" alt="" />
+  </button>
+</div>
+
+<div class="img1" id="case1" ></div>
+<div class="img2"  id="case2" ></div>
+<div class="img3" id="case3"></div>
+
+<div class="fleche4">
+  <button class="flecheBas" id="fleche4" type="">
+    <img  src="./icone/flecheImg.png" alt="" />
+  </button>
+</div>
+<div class="fleche5">
+  <button class="flecheBas" id=fleche5 type="">
+    <img  src="./icone/flecheImg.png" alt="" />
+  </button>
+</div>
+<div class="fleche6">
+  <button class="flecheBas"  id=fleche6 type="">
+    <img  src="./icone/flecheImg.png" alt="" />
+  </button>
+</div>
+
+</div>`;
+
+  const choixCouleur = () => {
+    const code = [3, 11, 2];
+
+    let chiffre1 = 3;
+    let chiffre2 = 11;
+    let chiffre3 = 2;
+    const reponse = document.getElementById("reponse");
+
+    document.querySelector("#case1").innerHTML +=
+      `
+  <img class="img" id="img` +
+      chiffre1 +
+      `" src="./imgappli/couleur/img` +
+      chiffre1 +
+      `.png"  />
+  `;
+
+    document.querySelector("#case2").innerHTML +=
+      `
+  <img class="img" id="img2` +
+      chiffre2 +
+      `" src="./imgappli/couleur/img` +
+      chiffre2 +
+      `.png"  />
+  `;
+
+    document.querySelector("#case3").innerHTML +=
+      `
+  <img class="img" id="img3` +
+      chiffre3 +
+      `" src="./imgappli/couleur/img` +
+      chiffre3 +
+      `.png"  />
+  
+  `;
+
+    fleche1.addEventListener("click", () => {
+      if (chiffre1 > 1) {
+        chiffre1 -= 1;
+        display();
+        supressionImageSuivante();
+      }
+    });
+
+    fleche4.addEventListener("click", () => {
+      if (chiffre1 < 11) {
+        chiffre1 += 1;
+        display();
+        supressionImgagePrecedente();
+      }
+    });
+
+    // fonction apparition  image
+    const display = () => {
+      // console.log(chiffre1);
+      if (chiffre1 < 12 && chiffre1 > 0) {
+        imgchiffre1 = "img" + chiffre1;
+        ajoutimg();
+      }
+    };
+
+    let ajoutimg = () => {
+      document.querySelector("#case1").innerHTML +=
+        `
+    
+    <img class="img" id="img` +
+        chiffre1 +
+        `" src="./imgappli/couleur/img` +
+        chiffre1 +
+        `.png"  />
+    
+    `;
+    };
+
+    const supressionImgagePrecedente = () => {
+      const prec = "img" + (chiffre1 - 1);
+      // console.log(prec);
+      let el1 = document.getElementById(`` + prec);
+      el1.remove();
+    };
+
+    const supressionImageSuivante = () => {
+      const suiv = "img" + (chiffre1 + 1);
+      let el2 = document.getElementById(`` + suiv);
+      el2.remove();
+    };
+
+    //----------------------------------------
+    // deuxieme choix
+    //----------------------------------------
+    fleche2.addEventListener("click", () => {
+      if (chiffre2 > 1) {
+        chiffre2--;
+        display2();
+        supressionImageSuivante2();
+      }
+    });
+    fleche5.addEventListener("click", () => {
+      if (chiffre2 < 11) {
+        chiffre2++;
+        display2();
+        supressionImgagePrecedente2();
+      }
+    });
+
+    // fonction apparition  image
+    const display2 = () => {
+      // console.log(chiffre1);
+      if (chiffre2 < 12 && chiffre2 > 0) {
+        imgchiffre2 = "img" + chiffre2;
+        ajoutimg2();
+      }
+    };
+
+    let ajoutimg2 = () => {
+      document.querySelector("#case2").innerHTML +=
+        `
+    
+    <img class="img" id="img2` +
+        chiffre2 +
+        `" src="./imgappli/couleur/img` +
+        chiffre2 +
+        `.png"  />
+    
+    `;
+    };
+    const supressionImgagePrecedente2 = () => {
+      const prec2 = "img2" + (chiffre2 - 1);
+      // console.log(prec2);
+      let el3 = document.getElementById(`` + prec2);
+      // console.log(el3);
+      el3.remove();
+    };
+    const supressionImageSuivante2 = () => {
+      const suiv2 = "img2" + (chiffre2 + 1);
+      let el4 = document.getElementById(`` + suiv2);
+      el4.remove();
+    };
+
+    //----------------------------------------
+    // troisieme choix
+    //----------------------------------------
+    fleche3.addEventListener("click", () => {
+      if (chiffre3 > 1) {
+        chiffre3--;
+        display3();
+        supressionImageSuivante3();
+      }
+    });
+    fleche6.addEventListener("click", () => {
+      if (chiffre3 < 11) {
+        chiffre3++;
+        display3();
+        supressionImgagePrecedente3();
+      }
+    });
+
+    // fonction apparition  image
+    const display3 = () => {
+      // console.log(chiffre1);
+      if (chiffre2 < 12 && chiffre2 > 0) {
+        imgchiffre3 = "img" + chiffre3;
+        ajoutimg3();
+      }
+    };
+    let ajoutimg3 = () => {
+      document.querySelector("#case3").innerHTML +=
+        `
+    
+    <img class="img" id="img3` +
+        chiffre3 +
+        `" src="./imgappli/couleur/img` +
+        chiffre3 +
+        `.png"  />
+    
+    `;
+    };
+    const supressionImgagePrecedente3 = () => {
+      const prec3 = "img3" + (chiffre3 - 1);
+      // console.log(prec3);
+      let el5 = document.getElementById(`` + prec3);
+      // console.log(el5);
+      el5.remove();
+    };
+    const supressionImageSuivante3 = () => {
+      const suiv3 = "img3" + (chiffre3 + 1);
+      let el6 = document.getElementById(`` + suiv3);
+      el6.remove();
+    };
+
+
+  };
+
+  choixCouleur();
+// verif btn
+  // btn verif code
+  btnetape6.addEventListener("click", () => {
+    let propo = [
+      chiffre1,
+      chiffre2,
+      chiffre3
+    ];
+    const propositionCode2 = () => {
+      if (JSON.stringify(propo) == JSON.stringify(code)) {
+        //etape 41
+      }else{
+//mauvaise reponse
+      }
+
+
+  //fin etape 40
 };
