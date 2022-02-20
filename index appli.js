@@ -78,9 +78,7 @@ const ajoutIntro = () => {
     </div>
   </div>
   <div class="cont4">
-    <div class="instructions">
     
-    </div>
   </div>
   <div class="cont5">
     <div class="containerreponse">
@@ -104,18 +102,24 @@ const ajoutFond = () => {
 `;
 };
 const mauvaiseReponseIntro = () => {
-  document.querySelector("#introContent > div.cont4 > div").innerHTML = `
+  document.querySelector("#introContent > div.cont4 ").innerHTML = `
+  <div class="instructions">
+    
   <p>
   <img id="tuto" src="./icone/tuto.png" alt="" />Non il vous faut observé un chiffre sur une carte papier précédé d'un "#"
   </p>
+  </div>
   `;
 };
 const validationIntro = () => {
-  document.querySelector("#introContent > div.cont4 > div").innerHTML = `
+  document.querySelector("#introContent > div.cont4 ").innerHTML = `
+  <div class="instructions">
+    
   <p>
   <img id="tuto" src="./icone/tuto.png" alt="" />Super, vous pouvez prendre
-   la carte ** et suprimer les carte **, ** et appuyer sur suivant dans l'application!
+  la carte ** et suprimer les carte **, ** et appuyer sur suivant dans l'application!
   </p>
+  </div>
   `;
 
   let next = document.getElementById("btnetape1");
@@ -1287,12 +1291,7 @@ text-align: center;""
  </div>
 
 <div class="cont4">
-<div class="instructions">
-<p id=questionContainer>
-<img id="tuto" src="./icone/question.png" alt="" />
 
-</p>
-</div>
 </div>
 
 `;
@@ -1309,8 +1308,16 @@ text-align: center;""
 
 const clickdatecalendrier = () => {
   window.bonneDate.addEventListener("click", () => {
-    document.querySelector("#questionContainer").innerHTML = `
-    Nous partirons donc le 4, prenez la carte ... `;
+    document.querySelector("#introContent > div.cont4").innerHTML = `
+    <div class="instructions">
+<p id=questionContainer>
+
+
+<img id="tuto" src="./icone/question.png" alt="" />
+Nous partirons donc le 4, prenez la carte ... 
+</p>
+</div>
+`;
 
     let nextetape8 = document.getElementById("btnetape8");
     nextetape8.parentNode.removeChild(nextetape8);
@@ -1321,21 +1328,36 @@ const clickdatecalendrier = () => {
     clickbtnetape9();
   });
   window.mauvaiseDate1.addEventListener("click", () => {
-    document.querySelector("#questionContainer").innerHTML = `
-    oui mais on peut faire plus tôt...
+    document.querySelector("#introContent > div.cont4").innerHTML = `
+    <div class="instructions">
+    <p id=questionContainer>
     
+    <img id="tuto" src="./icone/question.png" alt="" />
+    oui mais on peut faire plus tôt...
+    </p>
+</div>
     `;
   });
   window.mauvaiseDate2.addEventListener("click", () => {
-    document.querySelector("#questionContainer").innerHTML = `
-    Non, qui pourrai naviguer dans ces conditions!
+    document.querySelector("#introContent > div.cont4").innerHTML = `
+    <div class="instructions">
+    <p id=questionContainer>
     
+    <img id="tuto" src="./icone/question.png" alt="" />
+    Non, qui pourrai naviguer dans ces conditions!
+    </p>
+</div>
   `;
   });
   window.mauvaiseDate3.addEventListener("click", () => {
-    document.querySelector("#questionContainer").innerHTML = `
+    document.querySelector("#introContent > div.cont4").innerHTML = `
+    <div class="instructions">
+    <p id=questionContainer>
+    
+    <img id="tuto" src="./icone/question.png" alt="" />
   oui mais on peut faire plus tôt...
-  
+  </p>
+</div>
   `;
   });
 };
@@ -1553,15 +1575,6 @@ usemap="#dateDeDepart" border="0">
 
 const clickvoile = () => {
   window.bonnevoile.addEventListener("click", () => {
-    document.querySelector("#questionContainer").innerHTML = `
-    Super, c'etait la bonne, on peut passer à la suite! `;
-
-    let nextetape14 = document.getElementById("btnetape12");
-    nextetape14.parentNode.removeChild(nextetape14);
-
-    document.querySelector("#footer").innerHTML += `
-        <div class=flecheshine  id="btnetape14" >></div>
-        `;
     clickbtnetape14();
   });
   window.mauvaisevoile.addEventListener("click", () => {
@@ -1573,22 +1586,30 @@ const clickvoile = () => {
 };
 //Etape 14 la carte 9
 const clickbtnetape14 = () => {
-  let etape15 = document.getElementById("btnetape14");
-  etape15.addEventListener("click", () => {
-    //cgt btn
-    let nextetape15 = document.getElementById("btnetape14");
-    nextetape15.parentNode.removeChild(nextetape15);
-    document.querySelector("#footer").innerHTML += `
-<div class=flecheshine id="btnetape15" >></div>
-`;
+  ///
+  // document.querySelector("#questionContainer").innerHTML = `
+  //   Super, c'etait la bonne, on peut passer à la suite! `;
 
-    let fond14 = document.querySelector("#body");
-    fond14.style.background = `center top / contain no-repeat url("./imgfond/9.jpg")`;
+  let nextetape14 = document.getElementById("btnetape12");
+  nextetape14.parentNode.removeChild(nextetape14);
 
-    //mise ne page 9
-    document.querySelector(
-      "body > div.container > div.introContent"
-    ).innerHTML = `
+  document.querySelector("#footer").innerHTML += `
+        <div class=flecheshine  id="btnetape14" >></div>
+        `;
+  ///
+  // let etape15 = document.getElementById("btnetape14");
+  // etape15.addEventListener("click", () => {
+  //cgt btn
+  let nextetape15 = document.getElementById("btnetape14");
+  nextetape15.parentNode.removeChild(nextetape15);
+
+  let fond14 = document.querySelector("#body");
+  fond14.style.background = `center top / contain no-repeat url("./imgfond/9.jpg")`;
+
+  //mise ne page 9
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
 
     
     <div class="cont1">
@@ -1608,12 +1629,15 @@ Prenez la carte 9 pour mieux voir!
 </div>
 
 `;
-
+  setTimeout(() => {
+    document.querySelector("#footer").innerHTML += `
+<div class=flecheshine id="btnetape15" >></div>
+`;
     let etape16 = document.getElementById("btnetape15");
     etape16.addEventListener("click", () => {
       clicketape16();
     });
-  });
+  }, 5000);
 };
 
 //etape 15 -----------------------
@@ -2618,6 +2642,11 @@ const etape40 = () => {
   document.querySelector(
     "body > div.container > div.introContent"
   ).innerHTML = `
+  <div class="cont1">
+  <div class="instructions">
+    
+  </div>
+</div>
 <div class="choixImg">
 <div class="fleche1">
   <button class="flecheHaut" id="fleche1" type="">
@@ -2846,21 +2875,418 @@ const etape40 = () => {
       let el6 = document.getElementById(`` + suiv3);
       el6.remove();
     };
+
+    // verif btn
+    // btn verif code
+    let btnnext41 = document.querySelector("#btnetape40");
+
+    btnnext41.addEventListener("click", () => {
+      let propo = [chiffre1, chiffre2, chiffre3];
+
+      const propositionCode4 = () => {
+        if (JSON.stringify(propo) == JSON.stringify(code)) {
+          etape41();
+        } else {
+          document.querySelector("#introContent > div.cont1").innerHTML = `
+          
+            
+
+  <div class="instructions">
+    <p>
+      <img id="tuto" src="./icone/dialogue.png" alt="" /> 
+      Regardez mieux!
+    </p>
+  </div>
+`;
+        }
+      };
+      propositionCode4();
+    });
   };
 
   choixCouleur();
-  // verif btn
-  // btn verif code
-  btnetape6.addEventListener("click", () => {
-    let propo = [chiffre1, chiffre2, chiffre3];
-    const propositionCode2 = () => {
-      if (JSON.stringify(propo) == JSON.stringify(code)) {
-        //etape 41
+
+  //fin etape 40
+};
+
+const etape41 = () => {
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "#ff6a70";
+
+  let finetape40 = document.getElementById("btnetape40");
+  finetape40.parentNode.removeChild(finetape40);
+
+  let fond41 = document.getElementById("body");
+  fond41.style.background = `center top / contain no-repeat url("")`;
+
+  //content
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+  
+<div class="cont1 ">
+<div class="instructions fondblanc">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" /> 
+Choissez le drapeau corespondant au bon drapeau...
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>certainement en rapport avec les etapes précedents...</i
+>
+</p>
+</div>
+</div>
+
+<div class="cont2">
+<div class="instructions">
+<map name="dateDeDepart" id="dateDeDepart">
+<area href="#" shape="rect" coords="84,359,123,405" id="bonDrapeau"  />
+<area href="#" shape="rect" coords="1,1,330,493" id="mauvaisDrapeau" />
+
+</map>
+
+<img src="./imgfond/drapeau.png" 
+usemap="#dateDeDepart" border="0">
+</div></div>
+
+<div class="cont4" >
+
+</div>`;
+
+  //click drapeau
+
+  const clickdrapeau = () => {
+    window.bonDrapeau.addEventListener("click", () => {
+      etape42();
+    });
+    window.mauvaisDrapeau.addEventListener("click", () => {
+      document.querySelector("#introContent > div.cont4").innerHTML = `
+      <div class="instructions fondblanc">
+    regardez mieux!
+    </div>
+    `;
+    });
+  };
+
+  clickdrapeau();
+
+  //fin etape41
+};
+
+const etape42 = () => {
+  let fond42 = document.getElementById("body");
+  fond42.style.background = `center top / contain no-repeat url("./imgfond/malte3.jpg")`;
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "white";
+  document.querySelector("#footer").innerHTML += `
+    <div class=fleche id="btnetape42" >></div>`;
+
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+ 
+<div class="cont1">
+
+</div>
+
+<div class="cont2">
+<div class="containerreponse">
+<p class="code" id=code>
+#
+</p>
+<input type="text" name="code" id="in20" value=214 class="code"placeholder="3 chiffres">
+</div>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Trouvez un numéro<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>qui commence par #</i
+>
+</p>
+</div>
+</div>`;
+  //on click 42
+  let etape42 = document.getElementById("btnetape42");
+  etape42.addEventListener("click", () => {
+    etapeValide43();
+  });
+  //recup le in et valider
+  const etapeValide43 = () => {
+    const code = 214;
+    const propositionCode = () => {
+      let chiffre = document.getElementById("in20").value;
+
+      if (chiffre == code) {
+        etape43();
       } else {
-        //mauvaise reponse
+        mauvaiseReponseIntro();
       }
     };
+    propositionCode();
+  };
+
+  //fin etape42
+};
+
+//etape 43
+const etape43 = () => {
+  let fond42 = document.getElementById("body");
+  fond42.style.background = ``;
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "#ff6a70";
+  let nextetape42 = document.getElementById("btnetape42");
+  nextetape42.parentNode.removeChild(nextetape42);
+  document.querySelector("#footer").innerHTML += `
+    <div class=fleche id="btnetape43" >></div>`;
+
+  //mise en place
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />A quelle date pensez vous arriver à Rome?
+</div>
+</div>
+
+<div class="cont2">
+<div class="containerreponse datefinale">
+
+<label for="date-select">Choissiez une date</label></br>
+
+<select onclick="this.form.texte.value=this.selectedIndex;"  name="jour" id="jour-select">
+<option value="20">jour</option>   
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+</select>
+<select name="mois" id="mois-select">
+<option value="02">mois</option>
+    <option value="01">janvier</option>
+    <option value="02">février</option>
+    <option value="03">mars</option>
+    <option value="04">avril</option>
+    <option value="05">mai</option>
+    <option value="06">juin</option>
+    <option value="07">juillet</option>
+    <option value="08">aout</option>
+    <option value="09">septembre</option>
+    <option value="10">octobre</option>
+    <option value="11">novembre</option>
+    <option value="12">decembre</option>
+</select>
+
+<select name="heure" id="heure-select">
+<option value="08">heure</option>   
+    <option value="01">01:00</option>
+    <option value="02">02:00</option>
+    <option value="03">03:00</option>
+    <option value="04">04:00</option>
+    <option value="05">05:00</option>
+    <option value="06">06:00</option>
+    <option value="07">07:00</option>
+    <option value="08">08:00</option>
+    <option value="09">09:00</option>
+    <option value="10">10:00</option>
+    <option value="11">11:00</option>
+    <option value="12">12:00</option>
+    <option value="13">13:00</option>
+    <option value="14">14:00</option>
+    <option value="15">15:00</option>
+    <option value="16">16:00</option>
+    <option value="17">17:00</option>
+    <option value="18">18:00</option>
+    <option value="19">19:00</option>
+    <option value="20">20:00</option>
+    <option value="21">21:00</option>
+    <option value="22">22:00</option>
+    <option value="23">23:00</option>
+    <option value="24">24:00</option>
+  
+</select>
+
+
+</div>
+</div>
+
+
+<div class="cont4">
+<div class="instructions">
+
+</div>
+</div>`;
+  //verif in date
+  let etape44 = document.getElementById("btnetape43");
+  etape44.addEventListener("click", () => {
+    console.log(document.querySelector("#jour-select").value);
+    console.log(document.querySelector("#mois-select").value);
+    console.log(document.querySelector("#heure-select").value);
+    const code44 = 20;
+    const code45 = 02;
+    const code46 = 08;
+
+    let chiffre44 = document.querySelector("#jour-select").value;
+    let chiffre45 = document.querySelector("#mois-select").value;
+    let chiffre46 = document.querySelector("#heure-select").value;
+
+    if (code44 == chiffre44 && code45 == chiffre45 && code46 == chiffre46) {
+      etape45();
+    } else {
+      document.querySelector("#introContent > div.cont4 > div").innerHTML = `
+      Il doit y avoir une heure observez mieux!
+      `;
+    }
+
+    //fin click
   });
-  propositionCode2();
-  //fin etape 40
+
+  //fin etape 43
+};
+
+const etape45 = () => {
+  //chg titre
+  document.querySelector("#header > div > h3").innerHTML = "Félicitation!";
+
+  let finetape45 = document.getElementById("btnetape43");
+  finetape45.parentNode.removeChild(finetape45);
+
+  document.querySelector("#footer").innerHTML += `
+  <div class=flecheshine id="btnetape46" >></div>`;
+
+  let fond41 = document.getElementById("body");
+  fond41.style.background = `center top / contain no-repeat url("./imgfond/felicitation.jpg")`;
+
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+<div class="instructions fondblanc">
+<img id="tuto" src="./icone/dialogue.png" alt="" />Supprimer les cartes D, 78 et 67
+
+</div>
+</div>
+
+<div class="cont2">
+
+</div>
+
+
+<div class="cont4">
+<div class="instructions fondblanc">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" />
+Après avoir amené Paul au préfet, 
+vous êtes arrivé pile a temps pour fêter Noel le 
+20 février à 8h avec votre maman et votre foie gras!
+</p>
+</div>
+</div>`;
+  score();
+  etape46();
+  //fin 45
+};
+
+const score = () => {
+  console.log(timerElement.innerText);
+  let valeur = [timerElement.innerText];
+};
+
+//etape 46
+const etape46 = () => {
+  //chg titre
+  document.querySelector("#header > div > h3").innerHTML = "";
+  let fond46 = document.getElementById("body");
+  fond46.style.background = `center top / contain no-repeat url("./imgfond/bible.jpg")`;
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+
+<div class="cont1">
+<div class="instructions ">
+<img id="tuto" src="./icone/dialogue.png" alt="" />Retrouvez cette 
+histoire dans la bible, dans le livre des Actes des apôtre aux chapitres 27 et 28.
+
+</div>
+</div>
+
+<div class="cont2">
+
+</div>
+
+
+<div class="cont4">
+<div class="instructions fondblanc">
+<p>
+<img id="tuto" src="./icone/score.png" alt="" />
+Votre temps est de ${timerElement.innerText} vous êtes 114 au classement!
+</p>
+</div>
+</div>`;
+
+  //sup timer
+  let timer = document.querySelector("#divTimer");
+  timer.parentNode.removeChild(timer);
+  let fondtimer = document.querySelector("#fondtimer");
+  fondtimer.parentNode.removeChild(fondtimer);
+  //fin 46
 };
