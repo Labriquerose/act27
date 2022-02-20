@@ -2846,26 +2846,21 @@ const etape40 = () => {
       let el6 = document.getElementById(`` + suiv3);
       el6.remove();
     };
-
-
   };
 
   choixCouleur();
-// verif btn
+  // verif btn
   // btn verif code
   btnetape6.addEventListener("click", () => {
-    let propo = [
-      chiffre1,
-      chiffre2,
-      chiffre3
-    ];
+    let propo = [chiffre1, chiffre2, chiffre3];
     const propositionCode2 = () => {
       if (JSON.stringify(propo) == JSON.stringify(code)) {
         //etape 41
-      }else{
-//mauvaise reponse
+      } else {
+        //mauvaise reponse
       }
-
-
+    };
+  });
+  propositionCode2();
   //fin etape 40
 };
