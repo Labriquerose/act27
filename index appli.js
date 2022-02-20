@@ -378,6 +378,7 @@ const choixImageHiero = () => {
           
             
   <div class="cont1">
+  <audio src="./son/transition1.mp3" type="audio/mp3"></audio>
   <div class="instructions">
     <p>
       <img id="tuto" src="./icone/dialogue.png" alt="" /> Nous partons donc pour l'Italie, prenez la carte 28 et supprimez la 33 et 1.
@@ -415,6 +416,34 @@ const choixImageHiero = () => {
 </div>
   
           `;
+
+          //son transition
+          let audioElem = document.querySelector(
+            "#introContent > div.cont1 > audio"
+          );
+          let playButton = document.getElementById("muted");
+
+          playButton.addEventListener("click", handlePlayButton, false);
+          playAudio();
+
+          async function playAudio() {
+            try {
+              await audioElem.play();
+              playButton.classList.add("playing");
+            } catch (err) {
+              playButton.classList.remove("playing");
+            }
+          }
+
+          function handlePlayButton() {
+            if (audioElem.paused) {
+              playAudio();
+            } else {
+              audioElem.pause();
+              playButton.classList.remove("playing");
+            }
+          }
+
           // modif btn next
           let nextetape4 = document.getElementById("btnetape4");
           nextetape4.parentNode.removeChild(nextetape4);
@@ -1476,6 +1505,7 @@ const clicketape10 = () => {
       "body > div.container > div.introContent"
     ).innerHTML = `  
   <div class="cont2">
+  <audio src="./son/tempete.mp3" type="audio/mp3"></audio>
     <div class="containerreponse">
       <p class="code" id=code>
              #
@@ -1504,6 +1534,31 @@ const clicketape10 = () => {
   </div>
   </div>
 `;
+    //son transition
+    let audioElem = document.querySelector("#introContent > div.cont2 > audio");
+    let playButton = document.getElementById("muted");
+
+    playButton.addEventListener("click", handlePlayButton, false);
+    playAudio();
+
+    async function playAudio() {
+      try {
+        await audioElem.play();
+        playButton.classList.add("playing");
+      } catch (err) {
+        playButton.classList.remove("playing");
+      }
+    }
+
+    function handlePlayButton() {
+      if (audioElem.paused) {
+        playAudio();
+      } else {
+        audioElem.pause();
+        playButton.classList.remove("playing");
+      }
+    }
+
     // fonction verif code
     let etape12 = document.getElementById("btnetape12");
     etape12.addEventListener("click", () => {
@@ -1525,6 +1580,8 @@ const etape13 = () => {
   //sup fond mer
   let fond13 = document.querySelector("#body");
   fond13.style.background = ``;
+  let nextetape14 = document.getElementById("btnetape12");
+  nextetape14.parentNode.removeChild(nextetape14);
   document.querySelector(
     "body > div.container > div.introContent"
   ).innerHTML = `
@@ -1590,9 +1647,6 @@ const clickbtnetape14 = () => {
   // document.querySelector("#questionContainer").innerHTML = `
   //   Super, c'etait la bonne, on peut passer à la suite! `;
 
-  let nextetape14 = document.getElementById("btnetape12");
-  nextetape14.parentNode.removeChild(nextetape14);
-
   document.querySelector("#footer").innerHTML += `
         <div class=flecheshine  id="btnetape14" >></div>
         `;
@@ -1637,7 +1691,7 @@ Prenez la carte 9 pour mieux voir!
     etape16.addEventListener("click", () => {
       clicketape16();
     });
-  }, 5000);
+  }, 1000);
 };
 
 //etape 15 -----------------------
@@ -2358,6 +2412,7 @@ const etape33 = () => {
       >Supprimez les 57, 87, 28 et 81.</i
     >
   </p>
+  
   </div>
   </div>
 `;
@@ -2418,6 +2473,7 @@ const etape35 = () => {
 </div>
 
 <div class="cont2">
+
 <div class="containerreponse">
 <p class="code" id=code>
 #
@@ -2445,6 +2501,7 @@ text-align: center;""
 </p>
 </div>
 </div>`;
+
   //on click 21
   let etape36 = document.getElementById("btnetape36");
   etape36.addEventListener("click", () => {
@@ -3173,9 +3230,6 @@ const etape43 = () => {
   //verif in date
   let etape44 = document.getElementById("btnetape43");
   etape44.addEventListener("click", () => {
-    console.log(document.querySelector("#jour-select").value);
-    console.log(document.querySelector("#mois-select").value);
-    console.log(document.querySelector("#heure-select").value);
     const code44 = 20;
     const code45 = 02;
     const code46 = 08;
@@ -3240,7 +3294,11 @@ vous êtes arrivé pile a temps pour fêter Noel le
 </div>
 </div>`;
   score();
-  etape46();
+
+  let etape146 = document.getElementById("btnetape46");
+  etape146.addEventListener("click", () => {
+    etape46();
+  });
   //fin 45
 };
 
@@ -3264,7 +3322,9 @@ const etape46 = () => {
 <div class="cont1">
 <div class="instructions ">
 <img id="tuto" src="./icone/dialogue.png" alt="" />Retrouvez cette 
-histoire dans la bible, dans le livre des Actes des apôtre aux chapitres 27 et 28.
+histoire dans la bible, dans le livre des Actes des apôtre aux chapitres 27 et 28.</br>
+
+<a href="https://lire.la-bible.net/lecture/actes/27/1/?_open=true" target="_blank">Lire le texte</a>
 
 </div>
 </div>
@@ -3284,9 +3344,24 @@ Votre temps est de ${timerElement.innerText} vous êtes 114 au classement!
 </div>`;
 
   //sup timer
+  let nextetape46 = document.getElementById("btnetape46");
+  nextetape46.parentNode.removeChild(nextetape46);
+
   let timer = document.querySelector("#divTimer");
   timer.parentNode.removeChild(timer);
   let fondtimer = document.querySelector("#fondtimer");
   fondtimer.parentNode.removeChild(fondtimer);
+
+  document.querySelector("#footer").innerHTML = `
+  <div class="cont4">
+  <div class="instructions ">
+  <p>
+  <img id="tuto" src="./icone/dialogue.png" alt="" />
+  <a href="https://labriquerose.github.io/act27/" target="_blank"> N'hésiter pas à nous mettre un commentaire!</a>
+
+  </p>
+  </div>
+  </div>
+`;
   //fin 46
 };
