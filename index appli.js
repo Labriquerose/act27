@@ -3303,7 +3303,6 @@ vous êtes arrivé pile a temps pour fêter Noel le
 };
 
 const score = () => {
-  console.log(timerElement.innerText);
   let valeur = [timerElement.innerText];
 };
 
@@ -3330,17 +3329,30 @@ histoire dans la bible, dans le livre des Actes des apôtre aux chapitres 27 et 
 </div>
 
 <div class="cont2">
-
-</div>
-
-
-<div class="cont4">
 <div class="instructions fondblanc">
 <p>
 <img id="tuto" src="./icone/score.png" alt="" />
 Votre temps est de ${timerElement.innerText} vous êtes 114 au classement!
 </p>
 </div>
+</div>
+
+
+
+
+
+
+<div class="cont4">
+<div class="instructions ">
+<p>
+<img id="tuto" src="./icone/dialogue.png" alt="" />
+<a href="https://labriquerose.github.io/act27/" target="_blank"> N'hésiter pas à nous mettre un commentaire!</a>
+
+</p>
+</div>
+
+
+
 </div>`;
 
   //sup timer
@@ -3353,15 +3365,7 @@ Votre temps est de ${timerElement.innerText} vous êtes 114 au classement!
   fondtimer.parentNode.removeChild(fondtimer);
 
   document.querySelector("#footer").innerHTML = `
-  <div class="cont4">
-  <div class="instructions ">
-  <p>
-  <img id="tuto" src="./icone/dialogue.png" alt="" />
-  <a href="https://labriquerose.github.io/act27/" target="_blank"> N'hésiter pas à nous mettre un commentaire!</a>
 
-  </p>
-  </div>
-  </div>
 `;
   //fin 46
 };

@@ -273,7 +273,7 @@ p {
   justify-self: center;
   align-self: center;
   grid-area: cont2;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -288,13 +288,15 @@ p {
   justify-self: center;
   align-self: center;
   grid-area: cont4;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .cont5 {
   justify-self: center;
   align-self: center;
   grid-area: cont5;
-  width: 100%;
+  width: 90%;
 }
 /* ---------------------------------------------- */
 
