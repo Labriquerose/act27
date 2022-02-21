@@ -1510,7 +1510,7 @@ const clicketape10 = () => {
       <p class="code" id=code>
              #
       </p>
-      <input type="text" name="code" id="in" value=111 class="code"placeholder="3 chiffres">
+      <input type="text" name="code" id="in" value=541 class="code"placeholder="3 chiffres">
     </div>
   </div>
   
@@ -1562,7 +1562,7 @@ const clicketape10 = () => {
     // fonction verif code
     let etape12 = document.getElementById("btnetape12");
     etape12.addEventListener("click", () => {
-      const code11 = 111;
+      const code11 = 541;
       const codeetape11 = () => {
         let chiffre11 = document.getElementById("in").value;
         if (chiffre11 == code11) {
@@ -1865,7 +1865,7 @@ const etape21 = () => {
 <p class="code" id=code>
  #
 </p>
-<input type="text" name="code" id="in20" value=000 class="code"placeholder="3 chiffres">
+<input type="text" name="code" id="in20" value=974 class="code"placeholder="3 chiffres">
 </div>
 </div>
 
@@ -1895,7 +1895,7 @@ text-align: center;""
   });
   //recup le in et valider
   const etapeValide22 = () => {
-    const code22 = 000;
+    const code22 = 974;
     const propositionCode = () => {
       let chiffre22 = document.getElementById("in20").value;
 
@@ -2342,6 +2342,7 @@ text-align: center;""
     document.querySelector("#footer").innerHTML += `
 <div class=fleche id="btnetape31" >></div>
 `;
+
     //on click verif
     // fonction verif code
     let etape32 = document.getElementById("btnetape31");

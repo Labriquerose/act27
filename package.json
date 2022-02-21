@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "rellax": "^1.12.1",
+    "save": "^2.4.0"
+  }
+}
