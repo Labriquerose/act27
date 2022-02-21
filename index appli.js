@@ -1619,12 +1619,10 @@ usemap="#dateDeDepart" border="0">
 </div>
 
 <div class="cont4">
-<div class="instructions">
-<p id=questionContainer>
 
 
-</p>
-</div>
+
+
 </div>
 `;
   clickvoile();
@@ -1635,9 +1633,12 @@ const clickvoile = () => {
     clickbtnetape14();
   });
   window.mauvaisevoile.addEventListener("click", () => {
-    document.querySelector("#questionContainer").innerHTML = `
+    document.querySelector("#introContent > div.cont4").innerHTML = `
+    <div class="instructions">
+<p id=questionContainer>
     Non, essaie en une autre.
-    
+    </p>
+</div>
     `;
   });
 };
@@ -2700,9 +2701,9 @@ const etape40 = () => {
     "body > div.container > div.introContent"
   ).innerHTML = `
   <div class="cont1">
-  <div class="instructions">
+
     
-  </div>
+
 </div>
 <div class="choixImg">
 <div class="fleche1">
@@ -3319,7 +3320,7 @@ const etape46 = () => {
 
 
 <div class="cont1">
-<div class="instructions ">
+<div class="instructions fondblanc">
 <img id="tuto" src="./icone/dialogue.png" alt="" />Retrouvez cette 
 histoire dans la bible, dans le livre des Actes des apôtre aux chapitres 27 et 28.</br>
 
@@ -3328,7 +3329,7 @@ histoire dans la bible, dans le livre des Actes des apôtre aux chapitres 27 et 
 </div>
 </div>
 
-<div class="cont2">
+<div class="cont2 score">
 <div class="instructions fondblanc">
 <p>
 <img id="tuto" src="./icone/score.png" alt="" />

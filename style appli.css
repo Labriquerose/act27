@@ -273,7 +273,7 @@ p {
   justify-self: center;
   align-self: center;
   grid-area: cont2;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -281,6 +281,9 @@ p {
   justify-self: center;
   align-self: center;
   grid-area: cont3;
+  width: 90%;
+}
+.score {
   width: 90%;
 }
 
