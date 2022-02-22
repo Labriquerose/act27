@@ -103,12 +103,14 @@
   <body id="body"  onload="preload()">
     <div class="container" id="container">
       <div class="header" id="header">
-   
-        <div class="introTitle"><h2 id="h2Title">Le naufrage</h2>
-        </div>
+        <div id="domNode">
+          <div class="introTitle el">
+       <h2 id="h2Title">Le naufrage</h2>
+        </div></div>
         <div class="introSubTitle" id="sub"> Inspiré par la Bible </br> 
           Actes des apotres 27-28</div>
       </div>
+        
       
       <div class="introContent" id="introContent" >
         <div class="introtuto" id="introtuto1"><button id="tuto" >Tutoriel du jeu</button></div>
@@ -153,7 +155,7 @@
 
 </body>
   <script src="index appli.js"></script>  
-  <script src="timer.js"></script> 
-  <!-- <script src="anime.js"></script>  -->
 
+  <script src="./node_modules/animejs/lib/anime.js"></script> 
+  <script src="timer.js"></script> 
 </html>

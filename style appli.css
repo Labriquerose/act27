@@ -53,6 +53,12 @@
   grid-area: introTitle;
   text-align: center;
 }
+#domNode {
+  position: relative;
+  margin: 0 auto;
+  transform: translateX(-50px);
+  width: 300px;
+}
 
 .introSubTitle {
   grid-area: introSubTitle;
@@ -149,6 +155,7 @@ h2 {
   font-size: 2em;
   line-height: 120%;
 }
+
 h3 {
   font-family: Inter;
   font-style: normal;

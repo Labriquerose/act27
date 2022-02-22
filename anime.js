@@ -1,6 +1,6 @@
-// var el = document.querySelector("#domNode .el");
+var el = document.querySelector("#domNode .el");
 
-// var domNode = anime({
-//   targets: el,
-//   translateX: 250,
-// });
+var domNode = anime({
+  targets: el,
+  translateX: 250,
+});

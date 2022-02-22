@@ -1,3 +1,11 @@
+//anime
+var el = document.querySelector("#domNode .el");
+
+var domNode = anime({
+  targets: el,
+  translateX: 50,
+});
+
 const departMinutes = 60;
 let temps = departMinutes * 60;
 
