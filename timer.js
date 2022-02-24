@@ -1,22 +1,22 @@
-//anime
-var el = document.querySelector("#domNode .el");
+// //anime
+// var el = document.querySelector("#domNode .el");
 
-var domNode = anime({
-  targets: el,
-  translateX: 50,
-});
+// var domNode = anime({
+//   targets: el,
+//   translateX: 50,
+// });
 
-var lineDrawing = anime({
-  targets: "#lineDrawing .lines path",
-  strokeDashoffset: [anime.setDashoffset, 0],
-  easing: "easeInOutSine",
-  duration: 1500,
-  delay: function (el, i) {
-    return i * 250;
-  },
-  direction: "alternate",
-  loop: true,
-});
+// var lineDrawing = anime({
+//   targets: "#lineDrawing .lines path",
+//   strokeDashoffset: [anime.setDashoffset, 0],
+//   easing: "easeInOutSine",
+//   duration: 1500,
+//   delay: function (el, i) {
+//     return i * 250;
+//   },
+//   direction: "alternate",
+//   loop: true,
+// });
 
 ////////////////////////
 //timer
