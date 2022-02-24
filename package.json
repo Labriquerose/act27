@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "animejs": "^3.2.1",
+    "aos": "^2.3.4",
+    "chart": "^0.1.2",
     "rellax": "^1.12.1",
-    "save": "^2.4.0"
+    "save": "^2.4.0",
+    "swiper": "^8.0.6"
   }
 }

@@ -6,6 +6,21 @@ var domNode = anime({
   translateX: 50,
 });
 
+var lineDrawing = anime({
+  targets: "#lineDrawing .lines path",
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: "easeInOutSine",
+  duration: 1500,
+  delay: function (el, i) {
+    return i * 250;
+  },
+  direction: "alternate",
+  loop: true,
+});
+
+////////////////////////
+//timer
+
 const departMinutes = 60;
 let temps = departMinutes * 60;
 

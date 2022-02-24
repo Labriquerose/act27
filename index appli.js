@@ -3334,7 +3334,7 @@ histoire dans la bible, dans le livre des Actes des apôtre aux chapitres 27 et 
 <div class="instructions fondblanc">
 <p>
 <img id="tuto" src="./icone/score.png" alt="" />
-Votre temps est de ${timerElement.innerText} vous êtes 114 au classement!
+Votre temps est de ${timerElement.innerText} !
 </p>
 </div>
 </div>
