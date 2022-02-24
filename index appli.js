@@ -1499,13 +1499,15 @@ const clicketape10 = () => {
 
     //tempete fond
     let fond12 = document.querySelector("#body");
-    fond12.style.background = `center top / contain no-repeat url("./imgfond/mer.jpg")`;
+    fond12.style.background = `center top / contain no-repeat url("./imgfond/tempetemer.mp4")`;
     // tempete #
+
     document.querySelector(
       "body > div.container > div.introContent"
     ).innerHTML = `  
   <div class="cont2">
   <audio src="./son/tempete.mp3" type="audio/mp3"></audio>
+
     <div class="containerreponse">
       <p class="code" id=code>
              #
@@ -1534,6 +1536,12 @@ const clicketape10 = () => {
   </div>
   </div>
 `;
+    //     document.querySelector("#container").innerHTML += `
+    // <video autoplay muted loop id="myVideo">
+    // <source src="./imgfond/tempetemer.mp4" type="video/mp4">
+    // </video>
+    // `;
+
     //son transition
     let audioElem = document.querySelector("#introContent > div.cont2 > audio");
     let playButton = document.getElementById("muted");
