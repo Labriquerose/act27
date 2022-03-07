@@ -85,7 +85,7 @@ const ajoutIntro = () => {
       <p class="code" id=code>
         #
       </p>
-      <input type="text" name="code" id="in" class="code" value=254 placeholder="3 chiffres">
+      <input type="text" name="code" id="in" class="code" placeholder="3 chiffres">
     </div>
   </div>
     `;
@@ -391,7 +391,7 @@ const choixImageHiero = () => {
     <p class="code" id=code>
            #
     </p>
-    <input type="text" name="code" id="in" value=475 class="code"placeholder="3 chiffres">
+    <input type="text" name="code" id="in" class="code"placeholder="3 chiffres">
   </div>
 </div>
 
@@ -1091,7 +1091,7 @@ const choixImageHiero = () => {
                   <p class="code" id=code>
                          #
                   </p>
-                  <input type="text" name="code" id="in6" value=111 class="code"placeholder="3 chiffres">
+                  <input type="text" name="code" id="in6"  class="code"placeholder="3 chiffres">
                 </div>
               </div>
               
@@ -1471,7 +1471,7 @@ text-align: center;""
       <div class=flecheshine id="btnetape11" >></div>
       `;
       clicketape10();
-    }, 100);
+    }, 30000);
     //a regler a 30 000
 
     //fin de chapite
@@ -1512,7 +1512,7 @@ const clicketape10 = () => {
       <p class="code" id=code>
              #
       </p>
-      <input type="text" name="code" id="in" value=541 class="code"placeholder="3 chiffres">
+      <input type="text" name="code" id="in" class="code"placeholder="3 chiffres">
     </div>
   </div>
   
@@ -1700,7 +1700,8 @@ Prenez la carte 9 pour mieux voir!
     etape16.addEventListener("click", () => {
       clicketape16();
     });
-  }, 1000);
+  }, 10000);
+  // regler a
 };
 
 //etape 15 -----------------------
@@ -1728,7 +1729,7 @@ const clicketape16 = () => {
 
 <div class="cont2">
     <div class="instructions2">
-    <input type="text" name="code" id="in16" value=1492 class="code"placeholder="3 chiffres">
+    <input type="text" name="code" id="in16"  class="code"placeholder="3 chiffres">
     </div>
   </div>
 
@@ -1841,7 +1842,8 @@ text-align: center;""
     etape20.addEventListener("click", () => {
       etape21();
     });
-  }, 1000);
+  }, 10000);
+  //regler a
 };
 
 const etape21 = () => {
@@ -1873,7 +1875,7 @@ const etape21 = () => {
 <p class="code" id=code>
  #
 </p>
-<input type="text" name="code" id="in20" value=974 class="code"placeholder="3 chiffres">
+<input type="text" name="code" id="in20"  class="code"placeholder="3 chiffres">
 </div>
 </div>
 
@@ -1938,7 +1940,7 @@ const etape23 = () => {
 
 <div class="cont2">
 <div class="containerreponse">
-<input type="text" name="code" id="in22" value=20 class="code"placeholder="2 chiffres">
+<input type="text" name="code" id="in22"  class="code"placeholder="2 chiffres">
 
 </div><p class="metre" id=metre>
 mètres
@@ -2006,7 +2008,7 @@ const etape25 = () => {
 
 <div class="cont2">
 <div class="containerreponse">
-<input type="text" name="code" id="in22" value=15 class="code"placeholder="2 chiffres">
+<input type="text" name="code" id="in22"  class="code"placeholder="2 chiffres">
 
 </div><p class="metre" id=metre>
 mètres
@@ -2160,7 +2162,7 @@ text-align: center;""
 <p class="code" id=code>
 
 </p>
-<input type="text" name="code" id="in29" value=276 class="code"placeholder="3 chiffres">
+<input type="text" name="code" id="in29"  class="code"placeholder="3 chiffres">
 </div>
 
 
@@ -2215,7 +2217,7 @@ const etape30 = () => {
 <p class="code" id=code>
 #
 </p>
-<input type="text" name="code" id="in20" value=682 class="code"placeholder="3 chiffres">
+<input type="text" name="code" id="in20"  class="code"placeholder="3 chiffres">
 </div>
 </div>
 
@@ -2344,7 +2346,7 @@ text-align: center;""
 <p class="code" id=code>
 
 </p>
-<input type="text" name="code" id="in29" value=7682 class="code"placeholder="4 chiffres">
+<input type="text" name="code" id="in29" class="code"placeholder="4 chiffres">
 </div>`;
 
     document.querySelector("#footer").innerHTML += `
@@ -2488,7 +2490,7 @@ const etape35 = () => {
 <p class="code" id=code>
 #
 </p>
-<input type="text" name="code" id="in20" value=954 class="code"placeholder="3 chiffres">
+<input type="text" name="code" id="in20" class="code"placeholder="3 chiffres">
 </div>
 </div>
 
@@ -3073,7 +3075,7 @@ const etape42 = () => {
 <p class="code" id=code>
 #
 </p>
-<input type="text" name="code" id="in20" value=214 class="code"placeholder="3 chiffres">
+<input type="text" name="code" id="in20"  class="code"placeholder="3 chiffres">
 </div>
 </div>
 
@@ -3150,7 +3152,7 @@ const etape43 = () => {
 <label for="date-select">Choissiez une date</label></br>
 
 <select onclick="this.form.texte.value=this.selectedIndex;"  name="jour" id="jour-select">
-<option value="20">jour</option>   
+<option >jour</option>   
     <option value="01">01</option>
     <option value="02">02</option>
     <option value="03">03</option>
@@ -3183,7 +3185,7 @@ const etape43 = () => {
     <option value="30">30</option>
 </select>
 <select name="mois" id="mois-select">
-<option value="02">mois</option>
+<option >mois</option>
     <option value="01">janvier</option>
     <option value="02">février</option>
     <option value="03">mars</option>
@@ -3199,7 +3201,7 @@ const etape43 = () => {
 </select>
 
 <select name="heure" id="heure-select">
-<option value="08">heure</option>   
+<option >heure</option>   
     <option value="01">01:00</option>
     <option value="02">02:00</option>
     <option value="03">03:00</option>
