@@ -141,9 +141,9 @@ const validationIntro = () => {
 const choixImageHiero = () => {
   const code = [2, 4, 6];
 
-  let chiffre1 = 2;
-  let chiffre2 = 4;
-  let chiffre3 = 6;
+  let chiffre1 = 1;
+  let chiffre2 = 1;
+  let chiffre3 = 1;
   const reponse = document.getElementById("reponse");
 
   document.querySelector("#case1").innerHTML +=
@@ -611,15 +611,15 @@ const choixImageHiero = () => {
                 //fct choix vent
                 //---------------------------------------------------------------
                 const choixImageVent = () => {
-                  const code = [1, 2, 3, 4, 1, 2, 3];
+                  const code = [4, 1, 4, 4, 1, 4, 2];
 
                   let chiffre1 = 1;
-                  let chiffre2 = 2;
-                  let chiffre3 = 3;
-                  let chiffre4 = 4;
+                  let chiffre2 = 1;
+                  let chiffre3 = 1;
+                  let chiffre4 = 1;
                   let chiffre5 = 1;
-                  let chiffre6 = 2;
-                  let chiffre7 = 3;
+                  let chiffre6 = 1;
+                  let chiffre7 = 1;
                   const reponse = document.getElementById("reponse");
 
                   document.querySelector("#case1").innerHTML +=
