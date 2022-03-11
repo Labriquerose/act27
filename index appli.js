@@ -116,8 +116,7 @@ const validationIntro = () => {
   <div class="instructions">
     
   <p>
-  <img id="tuto" src="./icone/tuto.png" alt="" />Super, vous pouvez prendre
-  la carte ** et suprimer les carte **, ** et appuyer sur suivant dans l'application!
+  <img id="tuto" src="./icone/tuto.png" alt="" />Super, vous pouvez cliquez sur suivant pour répondre à l'égyptien.
   </p>
   </div>
   `;
@@ -129,7 +128,7 @@ const validationIntro = () => {
 <div class=flecheshine id="btnetape2" >></div>
 `;
 
-  let etape2 = document.getElementById("btnetape2");
+  let etape2 = document.getElementById("btnetape1");
   etape2.addEventListener("click", () => {
     //--------------------------------------------------------------
     //Etape2--------------------------------------------------------
