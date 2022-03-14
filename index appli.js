@@ -128,7 +128,7 @@ const validationIntro = () => {
 <div class=flecheshine id="btnetape2" >></div>
 `;
 
-  let etape2 = document.getElementById("btnetape1");
+  let etape2 = document.getElementById("btnetape2");
   etape2.addEventListener("click", () => {
     //--------------------------------------------------------------
     //Etape2--------------------------------------------------------
@@ -1080,7 +1080,7 @@ const choixImageHiero = () => {
                   <p>
                     <img id="tuto" src="./icone/dialogue.png" alt="" /> 
                     Vous prenez le bon vent et arrivez à Beaux ports,
-                     prenez la carte 51 et supprimez les cartes 17 et 34.
+                     prenez la carte 51 et supprimez la carte 34 et 1.
                   </p>
                 </div>
               </div>
@@ -1342,7 +1342,7 @@ const clickdatecalendrier = () => {
 
 
 <img id="tuto" src="./icone/question.png" alt="" />
-Nous partirons donc le 4, prenez la carte ... 
+Nous partirons donc le 7, prenez la carte 81. 
 </p>
 </div>
 `;
@@ -1415,6 +1415,8 @@ text-align: center;""
 
 >Ecouter c’est apprendre</i
 >
+Suprimez les cartes A, 34, 83, 21 et 28.
+Si ce n'est pas déjà fait prenez la carte 81.
 </p>
 </div>
 </div>
@@ -1424,9 +1426,25 @@ text-align: center;""
 </div>
 
 
+
+
 </div>
 
 `;
+
+    setTimeout(() => {
+      document.querySelector(
+        "body > div.container > div.introContent"
+      ).innerHTML = +`
+  
+<div class="cont4">
+<p>
+Si ce n'est pas déjà fait prenez la carte 81.
+</p>
+</div>
+  `;
+    }, 30000);
+
     // cgt btn
     let nextetape10 = document.getElementById("btnetape9");
     nextetape10.parentNode.removeChild(nextetape10);
@@ -1498,7 +1516,7 @@ const clicketape10 = () => {
 
     //tempete fond
     let fond12 = document.querySelector("#body");
-    fond12.style.background = `center top / contain no-repeat url("./imgfond/tempetemer.mp4")`;
+    fond12.style.background = `center top / contain no-repeat url("./imgfond/tempeteMer.jpg")`;
     // tempete #
 
     document.querySelector(
@@ -1812,7 +1830,7 @@ const etape18 = () => {
 <div class="cont4">
 <div class="instructions">
 <p>
-<img id="tuto" src="./icone/dialogue.png" alt="" />Supprimez les cartes 9, 20, 75 et 17.
+<img id="tuto" src="./icone/dialogue.png" alt="" />Supprimez les cartes 9, 20, 75, 55, 32 et 56.
 <i style="font-family: Inter;
 font-style: italic;
 font-weight: 300;
@@ -1827,6 +1845,9 @@ text-align: center;""
 </p>
 </div>
 </div>
+
+
+
 `;
   // sup btn le tps de voir le 87
   let nextetape20 = document.getElementById("btnetape18");
@@ -1856,8 +1877,6 @@ const etape21 = () => {
   let whitetitle = document.querySelector("#header > div > h3");
   whitetitle.style.color = "whitesmoke";
   //cgt image fond
-  let fond20 = document.getElementById("body");
-  fond20.style.background = `center top / contain no-repeat url("./imgfond/mer2.jpg")`;
 
   //mise en place #
   document.querySelector(
@@ -1951,8 +1970,8 @@ mètres
 <div class="instructions">
 <p>
 <img id="tuto" src="./icone/question.png" alt="" />Nous approchons de la terre,
-combien reste t'il de fond avant de nous échouer ? </br>
-Suprimez les cartes 55, 32.
+combien reste-t-il de fond avant de nous échouer ? </br>
+
 <i style="font-family: Inter;
 font-style: italic;
 font-weight: 300;
@@ -2208,7 +2227,9 @@ const etape30 = () => {
 
  
 <div class="cont1">
-
+<p>
+Supprimez les cartes B et 76, prenez la carte 57.
+</p>
 </div>
 
 <div class="cont2">
@@ -2246,7 +2267,7 @@ text-align: center;""
   });
   //recup le in et valider
   const etapeValide30 = () => {
-    const code = 682;
+    const code = 681;
     const propositionCode = () => {
       let chiffre = document.getElementById("in20").value;
 
@@ -2356,7 +2377,7 @@ text-align: center;""
     // fonction verif code
     let etape32 = document.getElementById("btnetape31");
     etape32.addEventListener("click", () => {
-      const code = 7682;
+      const code = 7648;
       const codeetape = () => {
         let chiffre = document.getElementById("in29").value;
         if (chiffre == code) {
@@ -2409,8 +2430,8 @@ const etape33 = () => {
   <div class="cont4">
   <div class="instructions">
   <p>
-    <img id="tuto" src="./icone/question.png" alt="" />Ceux qui savaient nager ont sauté en premier , les autres se sont accrochés à ce qu'ils on pu, et tous sont arrivés saint et sauf sur une île nommée Malte.
-    Prenez la carte 18. <br />
+    <img id="tuto" src="./icone/question.png" alt="" />Ceux qui savaient nager ont sauté en premier , les autres se sont accrochés à ce qu'ils on pu, et tous sont arrivés saints et saufs sur une île nommée Malte.
+    <br />
     <i style="font-family: Inter;
     font-style: italic;
     font-weight: 300;
@@ -2420,10 +2441,17 @@ const etape33 = () => {
     align-items: center;
     text-align: center;""
   
-      >Supprimez les 57, 87, 28 et 81.</i
+      >Supprimez les 57, 87 et 81.</i
     >
   </p>
   
+  </div>
+  <div class="cont5">
+  <div class="instructions">
+  <p>
+  Prenez la carte 18.
+  </p>
+  </div>
   </div>
   </div>
 `;
