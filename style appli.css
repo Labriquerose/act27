@@ -508,15 +508,16 @@ video {
   color: #b9bacf;
 }
 #in20 {
-  width: 30px;
+  width: 80px;
   text-align: center;
   left: 0px;
   top: -2pxx;
 }
 #in22 {
-  width: 30px;
+  height: 20px;
+  width: 70px;
   text-align: center;
-  left: 0px;
+  left: -20px;
   top: 6px;
 }
 .containerreponse2 {

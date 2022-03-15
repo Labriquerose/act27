@@ -483,7 +483,7 @@ const choixImageHiero = () => {
       display: flex;
       align-items: center;
       text-align: center;""
-        >Ordre des vents pour rejoindre Beaux ports</i>
+        >Ordre des vents pour aller de Myra à Beaux ports</i>
     </p>
   </div>
 </div>
@@ -1080,7 +1080,7 @@ const choixImageHiero = () => {
                   <p>
                     <img id="tuto" src="./icone/dialogue.png" alt="" /> 
                     Vous prenez le bon vent et arrivez à Beaux ports,
-                     prenez la carte 51 et supprimez la carte 34 et 1.
+                     prenez la carte 51 et supprimez la carte 34.
                   </p>
                 </div>
               </div>
@@ -1342,7 +1342,7 @@ const clickdatecalendrier = () => {
 
 
 <img id="tuto" src="./icone/question.png" alt="" />
-Nous partirons donc le 7, prenez la carte 81. 
+Nous partirons donc le 7, prenez la carte 81 et supprimez la 51. 
 </p>
 </div>
 `;
@@ -1435,7 +1435,7 @@ Si ce n'est pas déjà fait prenez la carte 81.
     setTimeout(() => {
       document.querySelector(
         "body > div.container > div.introContent"
-      ).innerHTML = +`
+      ).innerHTML = `
   
 <div class="cont4">
 <p>
@@ -1443,7 +1443,7 @@ Si ce n'est pas déjà fait prenez la carte 81.
 </p>
 </div>
   `;
-    }, 30000);
+    }, 31000);
 
     // cgt btn
     let nextetape10 = document.getElementById("btnetape9");
@@ -1862,7 +1862,7 @@ text-align: center;""
     etape20.addEventListener("click", () => {
       etape21();
     });
-  }, 10000);
+  }, 1000);
   //regler a
 };
 
@@ -1898,9 +1898,11 @@ const etape21 = () => {
 </div>
 
 
+
+
 <div class="cont4">
-<div class="instructions">
-<p>
+<div class="containerreponse">
+  <p class="code" id=code>
 <img id="tuto" src="./icone/question.png" alt="" />Trouvez un numéro<br />
 <i style="font-family: Inter;
 font-style: italic;
@@ -1956,9 +1958,12 @@ const etape23 = () => {
 
 </div>
 
+
+
+
 <div class="cont2">
 <div class="containerreponse">
-<input type="text" name="code" id="in22"  class="code"placeholder="2 chiffres">
+<input type="text" name="code" id="in22"  class="code" placeholder="2 chiffres">
 
 </div><p class="metre" id=metre>
 mètres
@@ -2180,7 +2185,8 @@ text-align: center;""
 <p class="code" id=code>
 
 </p>
-<input type="text" name="code" id="in29"  class="code"placeholder="3 chiffres">
+<input type="text" name="code" id="in29"  class="code" placeholder="3 chiffres">
+
 </div>
 
 
@@ -2227,9 +2233,11 @@ const etape30 = () => {
 
  
 <div class="cont1">
+<div class="containerreponse">
 <p>
 Supprimez les cartes B et 76, prenez la carte 57.
 </p>
+</div>
 </div>
 
 <div class="cont2">
@@ -2424,10 +2432,12 @@ const etape33 = () => {
   ).innerHTML = `  
   <div class="cont2">
    <audio src="./son/transition2.mp3" type="audio/mp3"></audio>
+
+
   </div>
   
   
-  <div class="cont4">
+  <div class="cont3">
   <div class="instructions">
   <p>
     <img id="tuto" src="./icone/question.png" alt="" />Ceux qui savaient nager ont sauté en premier , les autres se sont accrochés à ce qu'ils on pu, et tous sont arrivés saints et saufs sur une île nommée Malte.
@@ -2446,7 +2456,7 @@ const etape33 = () => {
   </p>
   
   </div>
-  <div class="cont5">
+  <div class="cont4">
   <div class="instructions">
   <p>
   Prenez la carte 18.
@@ -2509,6 +2519,12 @@ const etape35 = () => {
  
 <div class="cont1">
 
+  <div class="instructions">
+  <p>
+  Prenez la carte 18 si ce n'est pas déjà fait.
+  </p>
+ 
+  </div>
 </div>
 
 <div class="cont2">
@@ -2518,6 +2534,7 @@ const etape35 = () => {
 #
 </p>
 <input type="text" name="code" id="in20" class="code"placeholder="3 chiffres">
+
 </div>
 </div>
 
@@ -2612,7 +2629,7 @@ const etape37 = () => {
     document.querySelector(
       "#introContent > div.cont1 > div > h4"
     ).innerHTML = `Oui il a survécu après avoir longtemps attendu il ne s'est rien passé! Prenez la carte 24 et 77`;
-  }, 500);
+  }, 30000);
 
   //chg titre
   let whitetitle = document.querySelector("#header > div > h3");
@@ -2742,6 +2759,25 @@ const etape40 = () => {
 
     
 
+<div class="instructions">
+<p>
+<img id="tuto" src="./icone/question.png" alt="" />Trouvez une séquence qui se repete<br />
+<i style="font-family: Inter;
+font-style: italic;
+font-weight: 300;
+font-size: 0.9em;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;""
+
+>des couleurs peut etre?</i
+>
+</p>
+
+</div>
+
+
 </div>
 <div class="choixImg">
 <div class="fleche1">
@@ -2785,9 +2821,9 @@ const etape40 = () => {
   const choixCouleur = () => {
     const code = [3, 11, 2];
 
-    let chiffre1 = 3;
-    let chiffre2 = 11;
-    let chiffre3 = 2;
+    let chiffre1 = 1;
+    let chiffre2 = 1;
+    let chiffre3 = 1;
     const reponse = document.getElementById("reponse");
 
     document.querySelector("#case1").innerHTML +=
@@ -3094,7 +3130,10 @@ const etape42 = () => {
 
  
 <div class="cont1">
-
+<div class="instructions">
+<p> Prenez la carte 67, suppimez les cartes 90 et 24.
+</p>
+</div>
 </div>
 
 <div class="cont2">
@@ -3312,7 +3351,7 @@ const etape45 = () => {
 
 <div class="cont1">
 <div class="instructions fondblanc">
-<img id="tuto" src="./icone/dialogue.png" alt="" />Supprimer les cartes D, 78 et 67
+<img id="tuto" src="./icone/dialogue.png" alt="" />Supprimer les cartes D, 78, 18 et 67
 
 </div>
 </div>
