@@ -1415,7 +1415,7 @@ text-align: center;""
 
 >Ecouter c’est apprendre</i
 >
-Suprimez les cartes A, 34, 83, 21 et 28.
+Suprimez les cartes A, 21, 28, 34 et 83.
 Prenez la carte 81.
 </p>
 </div>
@@ -1933,7 +1933,7 @@ const etape23 = () => {
 <div class=fleche id="btnetape23" >></div>
 `;
   let fond23 = document.getElementById("body");
-  fond23.style.background = `center top / contain no-repeat url("./imgfond/sonde20m.jpg")`;
+  fond23.style.background = `center top / contain no-repeat url("./imgfond/sonde20m.png")`;
 
   //mise en place #
   document.querySelector(
@@ -2005,7 +2005,7 @@ const etape25 = () => {
 
   //cgt img fond
   let fond25 = document.getElementById("body");
-  fond25.style.background = `center top / contain no-repeat url("./imgfond/sonde15m.jpg")`;
+  fond25.style.background = `center top / contain no-repeat url("./imgfond/sonde15m.png")`;
   // content
   document.querySelector(
     "body > div.container > div.introContent"
@@ -2427,7 +2427,7 @@ const etape33 = () => {
   <div class="cont3">
   <div class="instructions">
   <p>
-    <img id="tuto" src="./icone/question.png" alt="" />Ceux qui savaient nager ont sauté en premier , les autres se sont accrochés à ce qu'ils on pu, et tous sont arrivés saints et saufs sur une île nommée Malte.
+    <img id="tuto" src="./icone/question.png" alt="" />Le bateau s'est cassé en deux, ceux qui savaient nager ont sauté en premier , les autres se sont accrochés à ce qu'ils on pu, et tous sont arrivés saints et saufs sur une île nommée Malte.
     <br />
     <i style="font-family: Inter;
     font-style: italic;
@@ -2438,7 +2438,7 @@ const etape33 = () => {
     align-items: center;
     text-align: center;""
   
-      >Supprimez les 57, 87 et 81.</i
+      >Supprimez les 57, 81, 87 et 93.</i
     >
   </p>
   
@@ -3118,7 +3118,7 @@ const etape42 = () => {
  
 <div class="cont1">
 <div class="instructions">
-<p> Prenez la carte 67, suppimez les cartes 90 et 24.
+<p> Prenez la carte 67, suppimez les cartes 24, 90 et la 58 si vous l'avez prise.
 </p>
 </div>
 </div>
