@@ -59,9 +59,9 @@ const ajoutIntro = () => {
   <div class="cont3">
     <div class="instructions">
       <p>
-        <img id="tuto" src="./icone/tuto.png" alt="" /> Vous pouvez
+        <img id="tuto" src="./icone/tuto.png" alt="" /> <b>Vous pouvez
         additioner les cartes dont l’entète est rouge avec celle dont
-        l’entète est bleu.<br />
+        l’entète est bleu.</b><br />
         <i style="font-family: Inter;
         font-style: italic;
         font-weight: 300;
