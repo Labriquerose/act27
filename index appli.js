@@ -3411,7 +3411,14 @@ Votre temps est de ${timerElement.innerText} !
 <div class="instructions ">
 <p>
 <img id="tuto" src="./icone/dialogue.png" alt="" />
-<a href="https://labriquerose.github.io/act27/" target="_blank"> N'hésiter pas à nous mettre un commentaire!</a>
+<a href="https://facebook.com" target="_blank"> N'hésiter pas à nous mettre un commentaire!</a>
+
+Et si vous voulez voir d'autres jeux développer un petit don sera le bienvenu!<br>
+
+Paypal: florian.picq@gmail.com 
+
+Ou envoyer des Eth ici : 0xf040f9d4a63bc361c4f92ad4ddf61ab15de51b55
+
 
 </p>
 </div>
