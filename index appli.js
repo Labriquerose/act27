@@ -380,7 +380,7 @@ const choixImageHiero = () => {
   <audio src="./son/transition1.mp3" type="audio/mp3"></audio>
   <div class="instructions">
     <p>
-      <img id="tuto" src="./icone/dialogue.png" alt="" /> Nous partons donc pour l'Italie, prenez la carte 28 et supprimez la 33 et 1.
+      <img id="tuto" src="./icone/dialogue.png" alt="" /> Nous partons donc pour l'Italie, prenez la carte 28 et supprimez la c, 1 et 33.
     </p>
   </div>
 </div>
@@ -1342,7 +1342,7 @@ const clickdatecalendrier = () => {
 
 
 <img id="tuto" src="./icone/question.png" alt="" />
-Nous partirons donc le 7, prenez la carte 81 et supprimez la 51. 
+Nous partirons donc le 7, supprimez la 51. 
 </p>
 </div>
 `;
@@ -1416,7 +1416,7 @@ text-align: center;""
 >Ecouter c’est apprendre</i
 >
 Suprimez les cartes A, 34, 83, 21 et 28.
-Si ce n'est pas déjà fait prenez la carte 81.
+Prenez la carte 81.
 </p>
 </div>
 </div>
@@ -1431,19 +1431,6 @@ Si ce n'est pas déjà fait prenez la carte 81.
 </div>
 
 `;
-
-    setTimeout(() => {
-      document.querySelector(
-        "body > div.container > div.introContent"
-      ).innerHTML = `
-  
-<div class="cont4">
-<p>
-Si ce n'est pas déjà fait prenez la carte 81.
-</p>
-</div>
-  `;
-    }, 31000);
 
     // cgt btn
     let nextetape10 = document.getElementById("btnetape9");
