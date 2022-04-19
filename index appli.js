@@ -140,9 +140,9 @@ const validationIntro = () => {
 const choixImageHiero = () => {
   const code = [2, 4, 6];
 
-  let chiffre1 = 1;
-  let chiffre2 = 1;
-  let chiffre3 = 1;
+  let chiffre1 = 2;
+  let chiffre2 = 4;
+  let chiffre3 = 6;
   const reponse = document.getElementById("reponse");
 
   document.querySelector("#case1").innerHTML +=
@@ -612,13 +612,13 @@ const choixImageHiero = () => {
                 const choixImageVent = () => {
                   const code = [4, 1, 4, 4, 1, 4, 2];
 
-                  let chiffre1 = 1;
+                  let chiffre1 = 4;
                   let chiffre2 = 1;
-                  let chiffre3 = 1;
-                  let chiffre4 = 1;
+                  let chiffre3 = 4;
+                  let chiffre4 = 4;
                   let chiffre5 = 1;
-                  let chiffre6 = 1;
-                  let chiffre7 = 1;
+                  let chiffre6 = 4;
+                  let chiffre7 = 2;
                   const reponse = document.getElementById("reponse");
 
                   document.querySelector("#case1").innerHTML +=
@@ -1849,7 +1849,7 @@ text-align: center;""
     etape20.addEventListener("click", () => {
       etape21();
     });
-  }, 1000);
+  }, 15000);
   //regler a
 };
 
@@ -2167,7 +2167,7 @@ text-align: center;""
 
 </div>
 
-<div class="cont4">
+<div class="cont2">
 <div class="containerreponse2">
 <p class="code" id=code>
 
@@ -2385,7 +2385,7 @@ text-align: center;""
       };
       codeetape();
     });
-  }, 300);
+  }, 3000);
 
   // fin etape 31
 };
@@ -2609,7 +2609,7 @@ const etape37 = () => {
     }
     let etape38 = document.getElementById("btnetape37");
     etape38.addEventListener("click", () => {
-      etape39();
+      etape362();
     });
     //fin son
 
@@ -2677,9 +2677,65 @@ const etape37 = () => {
   //fin etape 37
 };
 
+////////////////////////////////////////////
+const etape362 = () => {
+  //chgt btn
+  let nextetape392 = document.getElementById("btnetape37");
+  nextetape392.parentNode.removeChild(nextetape392);
+  document.querySelector("#footer").innerHTML += `
+ <div class=flecheshine id="btnetape362" >></div>
+ `;
+  //chg titre
+  let whitetitle = document.querySelector("#header > div > h3");
+  whitetitle.style.color = "whitesmoke";
+  //cgt image fond
+  let fond200 = document.getElementById("body");
+  fond200.style.background = `center top / contain no-repeat url("./imgfond/malte4.jpg")`;
+
+  //mise en place #
+  document.querySelector(
+    "body > div.container > div.introContent"
+  ).innerHTML = `
+
+  
+
+
+<div class="cont2">
+<div class="containerreponse">
+<p class="code" id=code>
+ #
+</p>
+<input type="text" name="code" id="in20"  class="code"placeholder="3 chiffres">
+</div>
+</div>
+
+`;
+  //on click 21
+  let etape22 = document.getElementById("btnetape362");
+  etape22.addEventListener("click", () => {
+    etapeValide22();
+  });
+  //recup le in et valider
+  const etapeValide22 = () => {
+    const code22 = 657;
+    const propositionCode = () => {
+      let chiffre22 = document.getElementById("in20").value;
+
+      if (chiffre22 == code22) {
+        etape39();
+      } else {
+        mauvaiseReponseIntro();
+      }
+    };
+    propositionCode();
+  };
+  //fin etape 20
+};
+////////////////////////////////////////////
+
 const etape39 = () => {
   //chgt btn
-  let nextetape39 = document.getElementById("btnetape37");
+  let nextetape39 = document.getElementById("btnetape362");
   nextetape39.parentNode.removeChild(nextetape39);
   document.querySelector("#footer").innerHTML += `
  <div class=flecheshine id="btnetape36" >></div>
